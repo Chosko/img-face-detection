@@ -34,8 +34,10 @@ while(top < H)
     while(left < W)
         right = min(left + inwidth, W);
         current = X(top+2:bottom-2, left+2:right-2);
-        current = imresize(current, [outheight, outwidth]);
-        imwrite(current, strcat(outfolder,'/',int2str(i),'.png'));
+        if size(current, 1) ~= 0 && size(current,2) ~= 0
+            current = imresize(current, [outheight, outwidth]);
+            imwrite(current, strcat(outfolder,'/',int2str(i),'.png'));
+        end
         left = left + inwidth;
         i = i+1;
     end

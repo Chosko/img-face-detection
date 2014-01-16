@@ -1,6 +1,5 @@
 function Y = ii(X)
-% Restituisce l'immagine integrale di X.
-% Funziona solo con immagini in scala di grigio
+% Calculates the upper-left 0-padded integral image of X
 
 X = double(X);
 [rows, columns] = size(X);
@@ -12,4 +11,4 @@ for r=2:rows+1
     end
 end
 
-Y = Xint(2:end,2:end);
+Y = Xint;

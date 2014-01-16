@@ -101,4 +101,7 @@ function training
         fprintf('\n');
     end
     toc
+    
+    % TODO: Inserire all'interno del processo di calcolo delle features
+    % l'algoritmo AdaBoost modificato
 end

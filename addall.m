@@ -1,2 +1,4 @@
+addpath functions
 addpath img
-addpath preparation
+addpath img/src
+addpath img/training-set

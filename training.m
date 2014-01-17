@@ -53,7 +53,7 @@ function training
     
     
     %
-    % calculate and store all the Haar-like features
+    % calculate and store all the Haar-like features for each image
     %    ___ ___     __ __ __ 
     %   |   |   |   |  |  |  |
     %   |   |   |   |  |  |  |     ___ ___

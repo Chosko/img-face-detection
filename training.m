@@ -43,65 +43,58 @@ function training
     foreachfeature(IMSIZE, @fcnt_increment);
     fprintf('counted %d Haar-like features\n', fcnt);
     
-    %
-    % Prepare the data structures
-    %
-    fprintf('creating data structures to store the features...\n');
-    pos_feats = zeros(fcnt, size(positives,3));
-    neg_feats = zeros(fcnt, size(negatives,3));
-    fprintf('data structures created\n');
+    %-----------------------------------------------
+    % Training algorithm
+    %-----------------------------------------------
     
+    % Inizializzo le variabili
+    layer = 0;                                  % Numero del classificatore forte corrente (livello della cascata di classificatori)
+    tot_neg = length(negatives);                % Numero di esempi negativi
+    tot_pos = length(positives);                % Numero di esempi positivi
+    false_positives = tot_neg;                  % Numero di falsi positivi rimasti
     
-    %
-    % calculate and store all the Haar-like features for each image
-    %    ___ ___     __ __ __ 
-    %   |   |   |   |  |  |  |
-    %   |   |   |   |  |  |  |     ___ ___
-    %   |___|___|   |__|__|__|    |   |   |
-    %       A            B        |___|___|
-    %    _______     ________     |   |   |
-    %   |       |   |________|    |___|___|
-    %   |-------|   |________|        E
-    %   |_______|   |________|
-    %       C            D 
-    %
-    function calculate_pos_feature(X,Y)
-        pos_feats(cur_feat, cur_img) = rectfeature(positives(:,:,cur_img),X,Y);
-        cur_feat = cur_feat + 1;
-        if(mod(cur_feat,10000) == 0)
-            fprintf('.');
+    % Finchè ho falsi positivi
+    while false_positives > 0
+        layer = layer + 1;
+        
+        % Inizializzo i pesi
+        positive_weights(1:tot_pos) = 1/(2*tot_pos);
+        negative_weights(1:tot_neg) = 1/(2*tot_neg);
+        
+        % Inizializzo variabili per il ciclo
+        t = 0;                                  % Numero del classificatore debole corrente
+        neg_pruned = 0;                         % Numero di negativi potati dal classificatore forte
+        
+        % Finchè il numero di negativi potati è meno del 50%
+        while(neg_pruned < tot_neg / 2)
+            t = t + 1;
+            
+            % Normalizzo i pesi Wt,i
+            
+            % Inizializzo T+ e T- al loro valore (che non cambierà)
+            
+            % Seleziono il miglior weak classifier rispetto all'errore
+            % pesato: Per ogni feature
+            
+                % Inizializzo una lista ordinata di immagini
+                
+                % Inizializzo S+ e S-
+                
+                % Per ogni immagine
+                
+                    % Se l'immagine non è ancora stata scartata
+                
+                    % e = min(S+ + (T- - S-), S- + (T+ - S+))
+                    %         |____________|  |____________|
+                    %                |               |
+                    %               p=-1            p=1
+                    
+                    % Se l'errore è minore di quelli calcolati
+                    % precedentemente, salva il valore corrente come valore
+                    % soglia, e salva p.
+           
+            % Aggiorno i pesi
         end
+        % Aggiungo lo strong classifier risultante alla cascata
     end
-    function calculate_neg_feature(X,Y)
-        neg_feats(cur_feat, cur_img) = rectfeature(negatives(:,:,cur_img),X,Y);
-        cur_feat = cur_feat + 1;
-        if(mod(cur_feat,10000) == 0)
-            fprintf('.');
-        end
-    end
-    
-    fprintf('Calculating all the features for the positive images\n');
-    tic;
-    total = size(positives,3);
-    for cur_img=1:length(positives)
-        cur_feat = 1;
-        fprintf('positive img %d of %d - %0.4f%%: ', cur_img, total, double(cur_img) / total);
-        foreachfeature(IMSIZE, @calculate_pos_feature);
-        fprintf('\n');
-    end
-    toc
-    
-    fprintf('Calculating all the features for the negative images\n');
-    tic;
-    total = size(negatives,3);
-    for cur_img=1:length(negatives)
-        cur_feat = 1;
-        fprintf('negative img %d of %d - %0.4f%%: ', cur_img, total, double(cur_img) / total);
-        foreachfeature(IMSIZE, @calculate_neg_feature);
-        fprintf('\n');
-    end
-    toc
-    
-    % TODO: Inserire all'interno del processo di calcolo delle features
-    % l'algoritmo AdaBoost modificato
 end

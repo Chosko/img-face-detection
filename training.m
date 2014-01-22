@@ -17,25 +17,29 @@ function training
     fprintf('negative images read: %d\n', size(original_positives,3));
 
     %
-    % calculate and store the integral images
+    % initialize useful variables
     %
-    positives = zeros(IMSIZE+1, IMSIZE+1, size(original_positives,3));
+    tot_pos = size(original_positives,3);                           % Numero di esempi positivi
+    tot_neg = size(original_negatives,3);                           % Numero di esempi negativi
+    tot_examples = tot_pos + tot_neg;                               % Numero totale di esempi
+    integral_images = zeros(IMSIZE+1, IMSIZE+1, tot_pos + tot_neg);    % Gli esempi
+    
+    %
+    % calculate the integral images
+    %
     fprintf('calculating the integral images...\n');
-    for i=1:size(original_positives,3)
-        positives(:,:,i) = ii(original_positives(:,:,i));
+    for i=1:tot_pos
+        integral_images(:,:,i) = ii(original_positives(:,:,i));
     end
-    clear original_positives;
-    negatives = zeros(IMSIZE+1, IMSIZE+1, size(original_negatives,3));
-    for i=1:size(original_negatives,3)
-        negatives(:,:,i) = ii(original_negatives(:,:,i));
+    for i=tot_pos+1:tot_examples
+        integral_images(:,:,i) = ii(original_negatives(:,:,i-tot_pos));
     end
-    clear original_negatives
     fprintf('integral images calculated\n');
     
     %
     % Count the number of features
     %
-    fprintf('counting features for a window of %dx%d...\n', IMSIZE, IMSIZE);
+    fprintf('counting number of features for a window of %dx%d...\n', IMSIZE, IMSIZE);
     fcnt = 0;
     function fcnt_increment(X,Y)
         fcnt = fcnt + 1;
@@ -48,28 +52,48 @@ function training
     %-----------------------------------------------
     
     % Inizializzo le variabili
-    layer = 0;                                  % Numero del classificatore forte corrente (livello della cascata di classificatori)
-    tot_neg = length(negatives);                % Numero di esempi negativi
-    tot_pos = length(positives);                % Numero di esempi positivi
-    false_positives = tot_neg;                  % Numero di falsi positivi rimasti
+    cascade_stage = 0;                                  % Numero del classificatore forte corrente (livello della cascata di classificatori)
+    positives = ones(1, tot_examples);           % Array che contrassegna gli esempi considerati positivi dall'algoritmo
     
+    %
+    % Questa funzione conta i falsi positivi rimasti
+    %
+    function fp = false_positives
+        fp = sum(positives(tot_pos+1:tot_examples));
+    end
+    
+    %
+    % Questa funzione conta i falsi negativi rimasti
+    %
+    function fn = false_negatives
+        fn = tot_pos - sum(positives(1:tot_pos));
+    end
+    
+    fprintf('>>> training started! <<<');
+    fprintf('Keep calm and do anything else: this will take a very long time...');
+    tic;
     % Finchè ho falsi positivi
     while false_positives > 0
-        layer = layer + 1;
-        
-        % Inizializzo i pesi
-        positive_weights(1:tot_pos) = 1/(2*tot_pos);
-        negative_weights(1:tot_neg) = 1/(2*tot_neg);
+        cascade_stage = cascade_stage + 1;
         
         % Inizializzo variabili per il ciclo
         t = 0;                                  % Numero del classificatore debole corrente
-        neg_pruned = 0;                         % Numero di negativi potati dal classificatore forte
+        neg_pruned = 0;                         % Numero di esempi negativi potati dal classificatore forte
+        neg_left = false_positives;             % Numero di esempi negativi ancora da potare
+        pos_left = tot_pos - false_negatives;   % Numero di esempi positivi rimasti illesi
+        
+        % Inizializzo i pesi
+        weights(1:tot_pos) = 1/(2*pos_left);
+        weights(tot_pos+1:tot_examples) = 1/(2*neg_left);
+        
+        fprintf('computing cascade stage n. %d\n', cascade_stage); 
         
         % Finchè il numero di negativi potati è meno del 50%
-        while(neg_pruned < tot_neg / 2)
+        while(neg_pruned < neg_left / 2)
             t = t + 1;
             
             % Normalizzo i pesi Wt,i
+            
             
             % Inizializzo T+ e T- al loro valore (che non cambierà)
             
@@ -95,6 +119,9 @@ function training
            
             % Aggiorno i pesi
         end
+        fprintf('negative samples pruned: %d' + neg_pruned);
+        
         % Aggiungo lo strong classifier risultante alla cascata
     end
+    toc
 end

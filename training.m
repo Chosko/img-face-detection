@@ -11,39 +11,55 @@ function training
     %
     % Trova il miglior classificatore debole
     %
-    function find_best_weak_classifier(X,Y,feat_cnt,group)
-        filename = sprintf('./tmp/featgroup_%d.mat', group);
+    function find_best_weak_classifier(X,Y,feat_cnt,group_cnt)
         if(feat_cnt == 1)
             fprintf('.');
         end
         
-        % Se esiste già un file del gruppo di features corrente
-        if(exist(filename, 'file'))
-            % Carico il gruppo da file
-            load(filename, 'group');
-        else
-            % Inizializzo un gruppo vuoto
-            group = [];
+        % Se il gruppo corrente non corrisponde a quello della feature corrente
+        if(group.n ~= group_cnt)
+            % Se il gruppo corrente è da salvare
+            if group.saved == 0
+                % Lo contrassegno come salvato e lo salvo su file
+                group.saved = 1;
+                filename = sprintf('./tmp/featgroup_%d.mat', group.n);
+                save(filename, 'group');
+            end
+            
+            % Aggiorno il gruppo corrente caricando quello della feature corrente
+            filename = sprintf('./tmp/featgroup_%d.mat', group_cnt);
+            
+            % Se esiste il file del gruppo richiesto lo carico
+            if(exist(filename, 'file'))
+                loaded = load(filename, 'group');
+                group = loaded.group;
+                clear loaded;
+            % Altrimenti creo un gruppo nuovo e lo contrassegno come da salvare
+            else
+                group.n = group_cnt;
+                group.saved = 0;
+                group.values = [];
+            end
         end
         
-        % Se il gruppo contiene già la feature che voglio calcolare
-        if(size(group,1) >= feat_cnt)
-            % carico i valori della feature dal gruppo
-            cur_feat_values = group(feat_cnt,:);
+        % Se la feature corrente è stata già calcolata per il gruppo corrente
+        if(size(group.values,1) >= feat_cnt)
+            % La carico dal gruppo corrente
+            cur_feat_values = group.values(feat_cnt, :);
         else
-            % La feature calcolata per tutte le immagini del training set
+            % Altrimenti la creo
             cur_feat_values = zeros(1,tot_examples);
 
             % Calcolo la feature per tutte le immagini
             for j=1:tot_examples
                 cur_feat_values(j) = rectfeature(integral_images(:,:,j),X,Y);
             end
-            
+
             % Inserisco la feature nel gruppo
-            group(feat_cnt,:) = cur_feat_values;
-            
-            % Salvo il gruppo
-            save(filename, 'group');
+            group.values(feat_cnt, :) = cur_feat_values;
+
+            % Contrassegno il gruppo come "da salvare"
+            group.saved = 0;
         end
         
         % Inizializzo una lista ordinata di immagini
@@ -122,7 +138,7 @@ function training
     %----------------------------------------------------------------------
 
     IMSIZE = 24;            % The dimension of each image of the training set.
-    FEAT_PER_GROUP = 100;    % The number of Haar-like features per group
+    FEAT_PER_GROUP = 1000;    % The number of Haar-like features per group
 
     %
     % read all the images from the training set
@@ -204,6 +220,7 @@ function training
             % Inizializza le variabili per trovare l'errore minimo
             weak_classifiers(weak_cnt).p = 0;
             e = inf;
+            group = struct('n',0,'saved',1,'values',[]);
             
             % Trova il miglior classificatore debole rispetto al peso
             foreachfeature(IMSIZE, @find_best_weak_classifier, FEAT_PER_GROUP);

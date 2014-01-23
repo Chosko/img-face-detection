@@ -1,3 +1,4 @@
 *.asv
 *.pdf
 *Thumbs.db
+tmp/

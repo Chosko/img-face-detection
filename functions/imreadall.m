@@ -15,7 +15,7 @@ for i=1:length(listing)
     if(listing(i).isdir == 0)
         curfile = strcat(path, listing(i).name);
         try
-            images(:,:,i) = imread(curfile);
+            images(:,:,count+1) = imread(curfile);
             count = count + 1;
         catch err
             if strcmp(err.identifier, 'MATLAB:imagesci:imread:fileFormat')

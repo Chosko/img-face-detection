@@ -132,6 +132,16 @@ function training
     function fn = false_negatives
         fn = tot_pos - sum(positives(1:tot_pos));
     end
+
+    %
+    % Questa funzione stampa lo stato corrente
+    %
+    function print_status
+        fprintf('- positives marked as positives (correct): %s\n', printpercent(sum(positives(1:tot_pos)), tot_pos));
+        fprintf('- positives marked as negatives (false negatives): %s\n', printpercent(tot_pos - sum(positives(1:tot_pos)), tot_pos));
+        fprintf('- negatives marked as positives (false positives): %s\n', printpercent(sum(positives(tot_pos+1:tot_examples)), tot_neg));
+        fprintf('- negatives marked as negatives (correct): %s\n', printpercent(tot_neg - sum(positives(tot_pos+1:tot_examples)), tot_neg));
+    end
     
     %----------------------------------------------------------------------
     % TRAINING ALGORITHM
@@ -197,14 +207,16 @@ function training
         neg_pruned = 0;                                                         % Numero di esempi negativi potati dal classificatore forte
         pos_approved = 0;                                                       % Numero di esempi positivi approvati dal classificatore forte
         neg_left = false_positives;                                             % Numero di esempi negativi ancora da potare
-        pos_left = tot_pos - false_negatives;                                   % Numero di esempi positivi rimasti illesi
+        pos_left = false_negatives;                                             % Numero di esempi positivi ancora da approvare
         weak_classifiers = struct('X',0,'Y',0,'p',0,'threshold',0, 'alpha',0);  % I weak classifiers dello strong classifier corrente
         
         % Inizializzo i pesi
         weights(1:tot_pos) = 1/(2*pos_left);
         weights(tot_pos+1:tot_examples) = 1/(2*neg_left);
         
-        fprintf('*** computing cascade stage n. %d ***\n', strong_cnt); 
+        fprintf('*** computing cascade stage n. %d ***\n', strong_cnt);
+        print_status
+        
         % Finchè il numero di negativi potati è meno del 50%, ciclo le
         while(neg_pruned < neg_left / 2)
             weak_cnt = weak_cnt + 1;            % Numero del classificatore debole corrente
@@ -222,9 +234,15 @@ function training
             e = inf;
             group = struct('n',0,'saved',1,'values',[]);
             
+            fprintf('|----progress bar');
+            for i = 17:ceil(tot_features/FEAT_PER_GROUP)
+                fprintf('-');
+            end
+            fprintf('|\n|');
             % Trova il miglior classificatore debole rispetto al peso
             foreachfeature(IMSIZE, @find_best_weak_classifier, FEAT_PER_GROUP);
             
+            fprintf('updating weights...');
             % Aggiorno i pesi
             beta = e/(1-e);
             for i = 1:tot_examples
@@ -237,6 +255,7 @@ function training
                     weights(i) = weights(i) * beta;
                 end
             end
+            fprintf('weights updated');
             
             fprintf('\nweak classifier chosen:\n- X: [');
             fprintf(' %d', cur_feat.X);
@@ -247,7 +266,7 @@ function training
             % Imposta le variabili per lo strong classifier
             weak_classifiers(weak_cnt).alpha = log(1/beta);
             
-            fprintf('testing the strong classifier (composed by %d weak class.)...\n', weak_cnt);
+            fprintf('testing the strong classifier (composed by %d weak classifiers)...\n', weak_cnt);
             % Testa lo strong classifier sulle immagini negative
             pruned = [];
             approved = [];
@@ -270,11 +289,9 @@ function training
                     end
                 end
             end
-            fprintf('- total samples marked as positive: %s\n', printpercent(length(approved), tot_examples));
-            fprintf('- total samples marked as negative: %s\n', printpercent(length(pruned), tot_examples));
+            print_status
             fprintf('- negative samples pruned: %s\n', printpercent(neg_pruned, neg_left));
-            fprintf('- false negatives: %s\n', printpercent(false_negatives, tot_examples - sum(positives)));
-            fprintf('- false positives: %s\n', printpercent(false_positives, sum(positives)));
+            fprintf('- positive samples approved: %s\n', printpercent(pos_approved, pos_left));
         end
         fprintf('\n');
         

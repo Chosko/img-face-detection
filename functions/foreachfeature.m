@@ -56,8 +56,8 @@ function foreachfeature(size, func, func_per_group)
                     x2 = x1 + xscale;
                     x3 = x2 + xscale;
 
-                    func([x0,x1,x2,x3], [y0,y1], grp);
-                    func([y0,y1], [x0,x1,x2,x3], grp); %invert X and Y for vertical features.
+                    func([x0,x1,x2,x3], [y0,y1], inc, grp);
+                    func([y0,y1], [x0,x1,x2,x3], inc, grp); %invert X and Y for vertical features.
                 end
             end
         end
@@ -73,7 +73,7 @@ function foreachfeature(size, func, func_per_group)
                     x1 = x0 + xscale;
                     x2 = x1 + xscale;
 
-                    func([x0,x1,x2], [y0,y1,y2], grp);
+                    func([x0,x1,x2], [y0,y1,y2], inc, grp);
                     % no inversion: four-rectangle features are simmetrical
                 end
             end

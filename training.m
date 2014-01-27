@@ -62,10 +62,10 @@ while false_pos + false_neg > 0
     
     fprintf('=== Computing cascade stage n. %d ===\n', strong_cnt);
     fprintf('Current status:\n');
-    fprintf('- positives marked as positives (correct): %d of %d (%0.2f%%)\n', sum(positives(1:tot_pos)), tot_pos, sum(positives(1:tot_pos)) / tot_pos * 100);
-    fprintf('- positives marked as negatives (false negatives): %d of %d (%0.2f%%)\n', tot_pos - sum(positives(1:tot_pos)), tot_pos, (tot_pos - sum(positives(1:tot_pos)) / tot_pos) * 100);
-    fprintf('- negatives marked as positives (false positives): %d of %d (%0.2f%%)\n', sum(positives(tot_pos+1:tot_samples)), tot_neg, sum(positives(tot_pos+1:tot_samples)) / tot_neg * 100);
-    fprintf('- negatives marked as negatives (correct): %d of %d (%0.2f%%)\n', tot_neg - sum(positives(tot_pos+1:tot_samples)), tot_neg, (tot_neg - sum(positives(tot_pos+1:tot_samples))) / tot_neg * 100);
+    fprintf('- positives marked as positives (correct): %s\n', printpercent(sum(positives(1:tot_pos)), tot_pos));
+    fprintf('- positives marked as negatives (false negatives): %s\n', printpercent(tot_pos - sum(positives(1:tot_pos)), tot_pos));
+    fprintf('- negatives marked as positives (false positives): %s\n', printpercent(sum(positives(tot_pos+1:tot_samples)), tot_neg));
+    fprintf('- negatives marked as negatives (correct): %s\n', printpercent(tot_neg - sum(positives(tot_pos+1:tot_samples)), tot_neg));
     
     % Aggiunge weak classifiers allo stage corrente finchè non sono stati
     % potati almeno il 50% di samples negativi
@@ -209,8 +209,7 @@ while false_pos + false_neg > 0
             if positives(i)
                 HS = 0;
                 for j = 1:weak_cnt
-                    cur = current_weak_classifiers(j);
-                    if cur.polarity * cur.values(i) < cur.polarity * cur.threshold
+                    if weak_classify(current_weak_classifiers(j), i)
                         HS = HS + cur.alpha;
                     end
                 end
@@ -227,8 +226,7 @@ while false_pos + false_neg > 0
             if positives(i)
                 HS = 0;
                 for j = 1:weak_cnt
-                    cur = current_weak_classifiers(j);
-                    if cur.polarity * cur.values(i) < cur.polarity * cur.threshold
+                    if weak_classify(current_weak_classifiers(j), i)
                         HS = HS + cur.alpha;
                     end
                 end

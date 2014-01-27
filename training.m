@@ -130,7 +130,21 @@ function training
     % Questa funzione conta i falsi negativi rimasti
     %
     function fn = false_negatives
-        fn = tot_pos - sum(positives(1:tot_pos));
+        fn = tot_pos - true_positives;
+    end
+    
+    %
+    % Questa funzione conta i veri positivi
+    %
+    function tp = true_positives
+        tp = sum(positives(1:tot_pos));
+    end
+    
+    %
+    % Questa funzione conta i veri negativi
+    %
+    function tn = true_negatives
+        tn = tot_neg - false_positives;
     end
 
     %
@@ -194,6 +208,7 @@ function training
     strong_cnt = 0;                                                     % Numero del classificatore forte corrente
     positives = ones(1, tot_examples);                                  % Array che contrassegna gli esempi considerati positivi dall'algoritmo
     strong_classifiers = struct('weak_classifiers', 0);                 % Gli strong classifiers della cascata
+    group = struct('n',0,'saved',1,'values',[]);
     
     fprintf('### training started! ###\n');
     fprintf('Keep calm and do anything else: this will take a very long time...\n');
@@ -206,19 +221,22 @@ function training
         weak_cnt = 0;                                                           % Numero del classificatore debole corrente
         neg_pruned = 0;                                                         % Numero di esempi negativi potati dal classificatore forte
         pos_approved = 0;                                                       % Numero di esempi positivi approvati dal classificatore forte
-        neg_left = false_positives;                                             % Numero di esempi negativi ancora da potare
-        pos_left = false_negatives;                                             % Numero di esempi positivi ancora da approvare
+        neg_to_prune = false_positives;                                         % Numero di esempi negativi ancora da potare
+        pos_to_approve = false_negatives;                                       % Numero di esempi positivi ancora da approvare
+        neg_ok = true_negatives;                                                % Numero di esempi negativi già potati
+        pos_ok = true_positives;                                                % Numero di esempi positivi già approvati
+        
         weak_classifiers = struct('X',0,'Y',0,'p',0,'threshold',0, 'alpha',0);  % I weak classifiers dello strong classifier corrente
         
         % Inizializzo i pesi
-        weights(1:tot_pos) = 1/(2*pos_left);
-        weights(tot_pos+1:tot_examples) = 1/(2*neg_left);
+        weights(1:tot_pos) = 1/(2*pos_ok);
+        weights(tot_pos+1:tot_examples) = 1/(2*neg_to_prune);
         
         fprintf('*** computing cascade stage n. %d ***\n', strong_cnt);
         print_status
         
         % Finchè il numero di negativi potati è meno del 50%, ciclo le
-        while(neg_pruned < neg_left / 2)
+        while(neg_pruned < neg_to_prune / 2)
             weak_cnt = weak_cnt + 1;            % Numero del classificatore debole corrente
             fprintf('--- selecting the weak classifier n. %d for this stage... ---\n', weak_cnt);
             
@@ -232,17 +250,18 @@ function training
             % Inizializza le variabili per trovare l'errore minimo
             weak_classifiers(weak_cnt).p = 0;
             e = inf;
-            group = struct('n',0,'saved',1,'values',[]);
             
             fprintf('|----progress bar');
             for i = 17:ceil(tot_features/FEAT_PER_GROUP)
                 fprintf('-');
             end
             fprintf('|\n|');
+            
             % Trova il miglior classificatore debole rispetto al peso
             foreachfeature(IMSIZE, @find_best_weak_classifier, FEAT_PER_GROUP);
+            fprintf('|\n');
+            fprintf('updating weights...\n');
             
-            fprintf('updating weights...');
             % Aggiorno i pesi
             beta = e/(1-e);
             for i = 1:tot_examples
@@ -255,7 +274,7 @@ function training
                     weights(i) = weights(i) * beta;
                 end
             end
-            fprintf('weights updated');
+            fprintf('weights updated\n');
             
             fprintf('\nweak classifier chosen:\n- X: [');
             fprintf(' %d', cur_feat.X);
@@ -270,6 +289,10 @@ function training
             % Testa lo strong classifier sulle immagini negative
             pruned = [];
             approved = [];
+            neg_pruned = 0;
+            neg_approved = 0;
+            pos_pruned = 0;
+            pos_approved = 0;
             for i = 1:tot_examples
                 if strong_classify(integral_images(:,:,i),weak_classifiers)
                     if positives(i)
@@ -278,6 +301,8 @@ function training
                     approved = [approved i];
                     if i <= tot_pos
                         pos_approved = pos_approved + 1;
+                    else
+                        neg_approved = neg_approved + 1;
                     end
                 else
                     if positives(i) ~= 1
@@ -286,12 +311,15 @@ function training
                     pruned = [pruned i];
                     if i > tot_pos
                         neg_pruned = neg_pruned + 1;
+                    else
+                        pos_pruned = pos_pruned + 1;
                     end
                 end
             end
-            print_status
-            fprintf('- negative samples pruned: %s\n', printpercent(neg_pruned, neg_left));
-            fprintf('- positive samples approved: %s\n', printpercent(pos_approved, pos_left));
+            fprintf('- positive samples approved (correct): %s\n', printpercent(pos_approved, pos_to_approve));
+            fprintf('- positive samples pruned (wrong): %s\n', printpercent(pos_pruned, pos_ok));
+            fprintf('- negative samples approved (wrong): %s\n', printpercent(neg_approved, neg_ok));
+            fprintf('- negative samples pruned (correct): %s\n', printpercent(neg_pruned, neg_to_prune));
         end
         fprintf('\n');
         

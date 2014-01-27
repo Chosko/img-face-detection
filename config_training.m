@@ -22,6 +22,12 @@ NEGATIVES_PATH = 'img/training-set/not-faces/';
 % Dimesione della finestra
 IMSIZE = 24;
 
+% Massimo numero di weak classifiers per ogni strong classifiers
+MAX_WEAK_CNT = 50;
+
+% Massimo numero di stages nella cascata di strong classifiers
+MAX_STRONG_CNT = 20;
+
 % Environment di test
 if exist('TEST', 'var') && TEST
     % Numero di features per gruppo

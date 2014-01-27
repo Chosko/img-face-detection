@@ -48,9 +48,12 @@ end
 fprintf('|\n|');
 [tot_groups,skipped] = calculate_all_features(integral_images, FEAT_PER_GROUP, FEAT_PATH, FEAT_FILE_PREFIX); 
 fprintf('|\nGroups calculated: %d (Skipped: %d)\n', tot_groups, skipped);
+if skipped > 0
+   warning('Some features were skipped because they already exists. If you want to overwrite them, run ''clear_features'' before');
+end
 
 % Salva su file le variabili necessarie per il training
-save(sprintf('%svars.mat', FEAT_PATH), 'tot_pos', 'tot_neg', 'tot_samples', 'tot_groups');
+save(sprintf('%svars.mat', FEAT_PATH), 'tot_pos', 'tot_neg', 'tot_samples', 'tot_groups', 'tot_features');
 
 % Pulisce la memoria, lasciando solo le costanti
 clear -regexp [a-z]*

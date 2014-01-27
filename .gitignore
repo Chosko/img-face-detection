@@ -1,5 +1,4 @@
 *.asv
 *.pdf
 *Thumbs.db
-tmp/*.mat
-*features/*.mat
+*.mat

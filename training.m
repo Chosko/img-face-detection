@@ -28,9 +28,6 @@ new_strong_classifier.weak_classifiers(1:MAX_WEAK_CNT) = new_weak_classifier;
 current_strong_classifiers(1:MAX_STRONG_CNT) = new_strong_classifier;
 current_weak_classifiers(1, MAX_WEAK_CNT) = new_weak_classifier;
 
-% Vettore per calcolare l'accuratezza dell'algoritmo
-accuracy = zeros(4, MAX_STRONG_CNT);
-
 % Vettore di boolean che determina se un esempio è stato contrassegnato
 % come positivo
 positives = ones(1, tot_samples);
@@ -60,12 +57,7 @@ while false_pos + false_neg > 0
     % Inizializza i pesi
     weights = [ones(1,tot_pos) / (2*tmp_pos), ones(1,tot_neg) / (2*tmp_neg) ];
     
-    fprintf('=== Computing cascade stage n. %d ===\n', strong_cnt);
-    fprintf('Current status:\n');
-    fprintf('- positives marked as positives (correct): %s\n', printpercent(sum(positives(1:tot_pos)), tot_pos));
-    fprintf('- positives marked as negatives (false negatives): %s\n', printpercent(tot_pos - sum(positives(1:tot_pos)), tot_pos));
-    fprintf('- negatives marked as positives (false positives): %s\n', printpercent(sum(positives(tot_pos+1:tot_samples)), tot_neg));
-    fprintf('- negatives marked as negatives (correct): %s\n', printpercent(tot_neg - sum(positives(tot_pos+1:tot_samples)), tot_neg));
+    fprintf('\n\n=== Computing cascade stage n. %d ===\n', strong_cnt);
     
     % Aggiunge weak classifiers allo stage corrente finchè non sono stati
     % potati almeno il 50% di samples negativi
@@ -76,7 +68,7 @@ while false_pos + false_neg > 0
             break;
         end
         
-        fprintf('--- Computing weak classifier n. %d of stage %d ---\n', weak_cnt, strong_cnt);
+        fprintf('\n--- Computing weak classifier n. %d of stage %d ---\n', weak_cnt, strong_cnt);
         
         % Normalizza i pesi
         weights = weights / sum(positives .* weights);
@@ -210,7 +202,7 @@ while false_pos + false_neg > 0
                 HS = 0;
                 for j = 1:weak_cnt
                     if weak_classify(current_weak_classifiers(j), i)
-                        HS = HS + cur.alpha;
+                        HS = HS + current_weak_classifiers(j).alpha;
                     end
                 end
                 if HS < current_strong_classifiers(strong_cnt).threshold
@@ -219,7 +211,7 @@ while false_pos + false_neg > 0
             end
         end
         
-        fprintf('Testing the strong classifier...\n');
+        fprintf('Testing the strong classifier against the negative samples...\n');
         % Testa lo strong classifier sui samples negativi
         neg_pruned = 0;
         for i = tot_pos + 1 : tot_samples
@@ -227,7 +219,7 @@ while false_pos + false_neg > 0
                 HS = 0;
                 for j = 1:weak_cnt
                     if weak_classify(current_weak_classifiers(j), i)
-                        HS = HS + cur.alpha;
+                        HS = HS + current_weak_classifiers(j).alpha;
                     end
                 end
                 if HS < current_strong_classifiers(strong_cnt).threshold
@@ -235,6 +227,93 @@ while false_pos + false_neg > 0
                 end
             end
         end
-        fprintf('Negative examples pruned: %d of %d (%0.2f%%)\n', neg_pruned, tmp_neg, neg_pruned / tmp_neg);
+        fprintf('Negative examples pruned: %s\n', printpercent(neg_pruned, tmp_neg));
+    end
+    
+    fprintf('Finalizing the strong classifier...\n');
+    % Toglie i weak classifiers rimasti inutilizzati
+    cnt = 0;
+    for i = 1:length(current_strong_classifiers(strong_cnt).weak_classifiers)
+        if current_strong_classifiers(strong_cnt).weak_classifiers(i).confirmed
+            cnt = cnt + 1;
+        else
+            break;
+        end
+    end
+    current_strong_classifiers(strong_cnt).weak_classifiers = current_strong_classifiers(strong_cnt).weak_classifiers(1:weak_cnt);
+    current_strong_classifiers(strong_cnt).confirmed = 1;
+    
+    fprintf('Evaluating samples with the strong classifier...\n');
+    % Valuta i samples positivi con lo strong classifier appena aggiornato
+    false_neg = 0;
+    for i = 1:tot_pos
+        if positives(i)
+            HS = 0;
+            for j = 1:cnt
+                if weak_classify(current_strong_classifiers(strong_cnt).weak_classifiers(j), i)
+                    HS = HS + current_strong_classifiers(strong_cnt).weak_classifiers(j).alpha;
+                end
+            end
+            if HS >= current_strong_classifiers(strong_cnt).threshold
+                positives(i) = 1;
+            else
+                false_neg = false_neg + 1;
+                positives(i) = 0;
+            end
+        end
+    end
+    
+    % Valuta i samples negativi con lo strong classifier appena aggiornato
+    false_pos = 0;
+    for i = tot_pos+1:tot_samples
+        if positives(i)
+            HS = 0;
+            for j = 1:cnt
+                if weak_classify(current_strong_classifiers(strong_cnt).weak_classifiers(j), i)
+                    HS = HS + current_strong_classifiers(strong_cnt).weak_classifiers(j).alpha;
+                end
+            end
+            if HS >= current_strong_classifiers(strong_cnt).threshold
+                false_pos = false_pos + 1;
+                positives(i) = 1;
+            else
+                positives(i) = 0;
+            end
+        end
+    end
+    
+    fprintf('- False positives introduced: %d\n', false_pos);
+    fprintf('- False negatives introduced: %d\n', false_neg);
+    fprintf('Current status:\n');
+    fprintf('- positives marked as positives (correct): %s\n', printpercent(sum(positives(1:tot_pos)), tot_pos));
+    fprintf('- positives marked as negatives (false negatives): %s\n', printpercent(tot_pos - sum(positives(1:tot_pos)), tot_pos));
+    fprintf('- negatives marked as positives (false positives): %s\n', printpercent(sum(positives(tot_pos+1:tot_samples)), tot_neg));
+    fprintf('- negatives marked as negatives (correct): %s\n', printpercent(tot_neg - sum(positives(tot_pos+1:tot_samples)), tot_neg));
+end
+
+fprintf('\nTraining terminated, saving results...\n');
+% Finalizza la cascata di classificatori e salva su file
+weak_classifier = struct('X',zeros(1,4), 'Y', zeros(1,4), 'polarity', 0, 'threshold', 0, 'alpha', 0);
+cascade = struct('weak_classifiers', weak_classifier, 'threshold', 0);
+for i = 1:MAX_STRONG_CNT
+    cur_strong = current_strong_classifiers(i);
+    if cur_strong.confirmed
+        cascade(i).threshold = cur_strong.threshold;
+        weak_cnt = length(cur_strong.weak_classifiers);
+        for j = 1:weak_cnt
+            cur_weak = cur_strong.weak_classifiers(j);
+            if cur_weak.confirmed
+                cascade(i).weak_classifiers(j).X = cur_weak.X;
+                cascade(i).weak_classifiers(j).Y = cur_weak.Y;
+                cascade(i).weak_classifiers(j).polarity = cur_weak.polarity;
+                cascade(i).weak_classifiers(j).threshold = cur_weak.threshold;
+                cascade(i).weak_classifiers(j).alpha = cur_weak.alpha;
+            else
+                break;
+            end
+        end
+    else
+        break;
     end
 end
+save(TRAINING_OUT_FILE, 'cascade');

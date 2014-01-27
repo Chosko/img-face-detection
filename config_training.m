@@ -10,6 +10,9 @@ FEAT_PATH = 'features/';
 % Prefisso del nome di ogni file in cui è salvato un gruppo di features
 FEAT_FILE_PREFIX = 'featgroup';
 
+% File di output della fase di training
+TRAINING_OUT_FILE = 'out/cascade.mat';
+
 % Path in cui sono salvate le funzioni
 FUNCTIONS_PATH = 'functions/';
 
@@ -41,6 +44,9 @@ if exist('TEST', 'var') && TEST
 
     % Percorso in cui si trovano gli esempi negativi
     NEGATIVES_PATH = 'test/training-set/not-faces/';
+    
+    % File di output della fase di training
+    TRAINING_OUT_FILE = 'test/out/cascade.mat';
 end
 
 addpath(FEAT_PATH);

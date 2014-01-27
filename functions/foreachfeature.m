@@ -1,4 +1,4 @@
-function foreachfeature(size, func, func_per_group)
+function foreachfeature(size, func, feat_per_group)
 
 
 %   Legend of cursors
@@ -15,7 +15,7 @@ function foreachfeature(size, func, func_per_group)
     
     function n=inc
         cnt = cnt+1;
-        if cnt > func_per_group
+        if cnt > feat_per_group
             grp = grp + 1;
             cnt = 1;
         end
@@ -25,8 +25,9 @@ function foreachfeature(size, func, func_per_group)
     cnt=0;
     grp=1;
     if nargin < 3
-        func_per_group = inf;
+        feat_per_group = inf;
     end
+    exit_condition = nargout(func);
 
     % two-rectangle features use x0,x1,x2 and y0,y1 
     % (or y0,y1,y2 and x0,x1 for vertical features)
@@ -37,9 +38,20 @@ function foreachfeature(size, func, func_per_group)
                     y1 = y0 + yscale;
                     x1 = x0 + xscale;
                     x2 = x1 + xscale;
-
-                    func([x0,x1,x2], [y0,y1], inc, grp);
-                    func([y0,y1], [x0,x1,x2], inc, grp); % invert X and Y for vertical features.
+                    
+                    % Check if the function returns an exit condition
+                    if ~exit_condition
+                        func([x0,x1,x2], [y0,y1], inc, grp);
+                        func([y0,y1], [x0,x1,x2], inc, grp); % invert X and Y for vertical features.
+                    else
+                        if ~func([x0,x1,x2], [y0,y1], inc, grp)
+                            return; % Return if exit condition was detected
+                        end
+                        
+                        if ~func([y0,y1], [x0,x1,x2], inc, grp)
+                            return; % Return if exit condition was detected
+                        end
+                    end
                 end
             end
         end
@@ -56,8 +68,19 @@ function foreachfeature(size, func, func_per_group)
                     x2 = x1 + xscale;
                     x3 = x2 + xscale;
 
-                    func([x0,x1,x2,x3], [y0,y1], inc, grp);
-                    func([y0,y1], [x0,x1,x2,x3], inc, grp); %invert X and Y for vertical features.
+                    % Check if the function returns an exit condition
+                    if ~exit_condition
+                        func([x0,x1,x2,x3], [y0,y1], inc, grp);
+                        func([y0,y1], [x0,x1,x2,x3], inc, grp); % invert X and Y for vertical features.
+                    else
+                        if ~func([x0,x1,x2,x3], [y0,y1], inc, grp)
+                            return; % Return if exit condition was detected
+                        end
+                        
+                        if ~func([y0,y1], [x0,x1,x2,x3], inc, grp)
+                            return; % Return if exit condition was detected
+                        end
+                    end
                 end
             end
         end
@@ -72,9 +95,15 @@ function foreachfeature(size, func, func_per_group)
                     y2 = y1 + yscale;
                     x1 = x0 + xscale;
                     x2 = x1 + xscale;
-
-                    func([x0,x1,x2], [y0,y1,y2], inc, grp);
-                    % no inversion: four-rectangle features are simmetrical
+                    
+                    % Check if the function returns an exit condition
+                    if ~exit_condition
+                        func([x0,x1,x2], [y0,y1,y2], inc, grp); % no inversion: four-rectangle features are simmetrical
+                    else
+                        if ~func([x0,x1,x2], [y0,y1,y2], inc, grp)
+                            return; % Return if exit condition was detected
+                        end
+                    end
                 end
             end
         end

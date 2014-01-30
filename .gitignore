@@ -1,4 +1,5 @@
 *.asv
 *.pdf
 *Thumbs.db
-*.mat
+*featgroup*.mat
+*vars.mat

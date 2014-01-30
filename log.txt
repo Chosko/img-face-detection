@@ -1,0 +1,3541 @@
+*** Training started ***
+This will take a lot of time!! Keep calm and be Buren!
+Initializing data structures...
+
+
+=== Computing cascade stage n. 1 ===
+
+--- Computing weak classifier n. 1 of stage 1 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 8 15]
+- Y: [ 0 4 8]
+- polarity: 1
+- threshold: -639
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 0 of 7265 (0.00%)
+
+--- Computing weak classifier n. 2 of stage 1 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 1 22]
+- Y: [ 10 12 14]
+- polarity: 1
+- threshold: -253
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 0 of 7265 (0.00%)
+
+--- Computing weak classifier n. 3 of stage 1 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 4 6 8]
+- Y: [ 9 10]
+- polarity: 1
+- threshold: -12
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 0 of 7265 (0.00%)
+
+--- Computing weak classifier n. 4 of stage 1 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 12 13 14 15]
+- Y: [ 12 19]
+- polarity: 1
+- threshold: -529
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 1640 of 7265 (22.57%)
+
+--- Computing weak classifier n. 5 of stage 1 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 16 19 22]
+- Y: [ 3 22]
+- polarity: -1
+- threshold: 769
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 1557 of 7265 (21.43%)
+
+--- Computing weak classifier n. 6 of stage 1 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 10 11 12]
+- Y: [ 7 12]
+- polarity: 1
+- threshold: -16
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 1557 of 7265 (21.43%)
+
+--- Computing weak classifier n. 7 of stage 1 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 3 19]
+- Y: [ 20 21 22 23]
+- polarity: -1
+- threshold: -2219
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 2377 of 7265 (32.72%)
+
+--- Computing weak classifier n. 8 of stage 1 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 0 4 8]
+- Y: [ 1 9]
+- polarity: -1
+- threshold: 945
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 2338 of 7265 (32.18%)
+
+--- Computing weak classifier n. 9 of stage 1 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 11 14 17]
+- Y: [ 3 12]
+- polarity: -1
+- threshold: 102
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 2229 of 7265 (30.68%)
+
+--- Computing weak classifier n. 10 of stage 1 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 0 4 8]
+- Y: [ 15 19 23]
+- polarity: -1
+- threshold: 116
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 3275 of 7265 (45.08%)
+
+--- Computing weak classifier n. 11 of stage 1 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 5 21]
+- Y: [ 13 16 19]
+- polarity: -1
+- threshold: 141
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 4106 of 7265 (56.52%)
+Finalizing the strong classifier...
+Evaluating samples with the strong classifier...
+- False positives introduced: 3159
+- False negatives introduced: 0
+Current status:
+- positives marked as positives (correct): 868 of 868 (100.00%)
+- positives marked as negatives (false negatives): 0 of 868 (0.00%)
+- negatives marked as positives (false positives): 3159 of 7265 (43.48%)
+- negatives marked as negatives (correct): 4106 of 7265 (56.52%)
+
+
+=== Computing cascade stage n. 2 ===
+
+--- Computing weak classifier n. 1 of stage 2 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 13 18 23]
+- Y: [ 5 22]
+- polarity: -1
+- threshold: 2068
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 0 of 3159 (0.00%)
+
+--- Computing weak classifier n. 2 of stage 2 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 5 22]
+- Y: [ 10 12 14]
+- polarity: 1
+- threshold: -334
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 0 of 3159 (0.00%)
+
+--- Computing weak classifier n. 3 of stage 2 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 1 7 13]
+- Y: [ 0 4 8]
+- polarity: 1
+- threshold: -579
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 0 of 3159 (0.00%)
+
+--- Computing weak classifier n. 4 of stage 2 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 11 12 13 14]
+- Y: [ 16 18]
+- polarity: -1
+- threshold: -404
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 63 of 3159 (1.99%)
+
+--- Computing weak classifier n. 5 of stage 2 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 2 5 8]
+- Y: [ 7 22]
+- polarity: 1
+- threshold: -915
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 63 of 3159 (1.99%)
+
+--- Computing weak classifier n. 6 of stage 2 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 10 11 12]
+- Y: [ 9 12]
+- polarity: 1
+- threshold: -15
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 55 of 3159 (1.74%)
+
+--- Computing weak classifier n. 7 of stage 2 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 0 4 8]
+- Y: [ 18 24]
+- polarity: -1
+- threshold: 367
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 50 of 3159 (1.58%)
+
+--- Computing weak classifier n. 8 of stage 2 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 7 13 19]
+- Y: [ 8 13 18]
+- polarity: 1
+- threshold: 773
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 236 of 3159 (7.47%)
+
+--- Computing weak classifier n. 9 of stage 2 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 0 4 8]
+- Y: [ 1 8]
+- polarity: -1
+- threshold: 975
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 220 of 3159 (6.96%)
+
+--- Computing weak classifier n. 10 of stage 2 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 7 14 21]
+- Y: [ 10 14 18]
+- polarity: -1
+- threshold: -601
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 335 of 3159 (10.60%)
+
+--- Computing weak classifier n. 11 of stage 2 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 1 6 11]
+- Y: [ 18 23]
+- polarity: 1
+- threshold: -671
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 304 of 3159 (9.62%)
+
+--- Computing weak classifier n. 12 of stage 2 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 5 19]
+- Y: [ 15 17 19]
+- polarity: -1
+- threshold: 106
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 232 of 3159 (7.34%)
+
+--- Computing weak classifier n. 13 of stage 2 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 12 17 22]
+- Y: [ 3 10 17]
+- polarity: 1
+- threshold: -179
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 673 of 3159 (21.30%)
+
+--- Computing weak classifier n. 14 of stage 2 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 22 23 24]
+- Y: [ 12 22]
+- polarity: 1
+- threshold: -35
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 587 of 3159 (18.58%)
+
+--- Computing weak classifier n. 15 of stage 2 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|.............................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 0 17]
+- Y: [ 3 11 19]
+- polarity: 1
+- threshold: 3400
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 729 of 3159 (23.08%)
+
+--- Computing weak classifier n. 16 of stage 2 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 7 16]
+- Y: [ 12 13 14]
+- polarity: 1
+- threshold: -96
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 675 of 3159 (21.37%)
+
+--- Computing weak classifier n. 17 of stage 2 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 3 7 11]
+- Y: [ 8 11 14]
+- polarity: -1
+- threshold: 200
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 613 of 3159 (19.40%)
+
+--- Computing weak classifier n. 18 of stage 2 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 9 10 11]
+- Y: [ 0 22]
+- polarity: 1
+- threshold: 125
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 700 of 3159 (22.16%)
+
+--- Computing weak classifier n. 19 of stage 2 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 16 20 24]
+- Y: [ 1 5]
+- polarity: 1
+- threshold: -434
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 637 of 3159 (20.16%)
+
+--- Computing weak classifier n. 20 of stage 2 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 17 20 23]
+- Y: [ 2 22]
+- polarity: -1
+- threshold: 829
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 578 of 3159 (18.30%)
+
+--- Computing weak classifier n. 21 of stage 2 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 6 13 20]
+- Y: [ 9 16 23]
+- polarity: 1
+- threshold: 1289
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 667 of 3159 (21.11%)
+
+--- Computing weak classifier n. 22 of stage 2 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 16 19 22]
+- Y: [ 16 19]
+- polarity: 1
+- threshold: -193
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 1242 of 3159 (39.32%)
+
+--- Computing weak classifier n. 23 of stage 2 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 12 13]
+- Y: [ 8 9 10 11]
+- polarity: 1
+- threshold: -74
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 1332 of 3159 (42.17%)
+
+--- Computing weak classifier n. 24 of stage 2 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 10 18]
+- Y: [ 7 9 11]
+- polarity: 1
+- threshold: -255
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 1534 of 3159 (48.56%)
+
+--- Computing weak classifier n. 25 of stage 2 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 12 15 18]
+- Y: [ 19 20 21]
+- polarity: -1
+- threshold: 23
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 1418 of 3159 (44.89%)
+
+--- Computing weak classifier n. 26 of stage 2 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 11 12 13]
+- Y: [ 2 4 6]
+- polarity: 1
+- threshold: 32
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 1493 of 3159 (47.26%)
+
+--- Computing weak classifier n. 27 of stage 2 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 3 22]
+- Y: [ 1 4 7]
+- polarity: 1
+- threshold: -736
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 1775 of 3159 (56.19%)
+Finalizing the strong classifier...
+Evaluating samples with the strong classifier...
+- False positives introduced: 1384
+- False negatives introduced: 0
+Current status:
+- positives marked as positives (correct): 868 of 868 (100.00%)
+- positives marked as negatives (false negatives): 0 of 868 (0.00%)
+- negatives marked as positives (false positives): 1384 of 7265 (19.05%)
+- negatives marked as negatives (correct): 5881 of 7265 (80.95%)
+
+
+=== Computing cascade stage n. 3 ===
+
+--- Computing weak classifier n. 1 of stage 3 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 10 17 24]
+- Y: [ 0 4 8]
+- polarity: -1
+- threshold: 921
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 0 of 1384 (0.00%)
+
+--- Computing weak classifier n. 2 of stage 3 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 4 6 8]
+- Y: [ 3 20]
+- polarity: 1
+- threshold: -360
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 0 of 1384 (0.00%)
+
+--- Computing weak classifier n. 3 of stage 3 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 8 17]
+- Y: [ 9 13 17]
+- polarity: 1
+- threshold: -122
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 0 of 1384 (0.00%)
+
+--- Computing weak classifier n. 4 of stage 3 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 16 19 22]
+- Y: [ 2 15]
+- polarity: -1
+- threshold: 480
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 0 of 1384 (0.00%)
+
+--- Computing weak classifier n. 5 of stage 3 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 10 15]
+- Y: [ 8 14 20]
+- polarity: -1
+- threshold: -760
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 5 of 1384 (0.36%)
+
+--- Computing weak classifier n. 6 of stage 3 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 0 4 8]
+- Y: [ 2 24]
+- polarity: -1
+- threshold: 2103
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 3 of 1384 (0.22%)
+
+--- Computing weak classifier n. 7 of stage 3 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 12 13 14]
+- Y: [ 9 12]
+- polarity: -1
+- threshold: 17
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 3 of 1384 (0.22%)
+
+--- Computing weak classifier n. 8 of stage 3 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 4 13 22]
+- Y: [ 6 13 20]
+- polarity: -1
+- threshold: -1702
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 22 of 1384 (1.59%)
+
+--- Computing weak classifier n. 9 of stage 3 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 0 8 16 24]
+- Y: [ 20 22]
+- polarity: -1
+- threshold: -623
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 44 of 1384 (3.18%)
+
+--- Computing weak classifier n. 10 of stage 3 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 16 19]
+- Y: [ 8 12 16]
+- polarity: 1
+- threshold: -87
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 25 of 1384 (1.81%)
+
+--- Computing weak classifier n. 11 of stage 3 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 9 11 13 15]
+- Y: [ 15 19]
+- polarity: -1
+- threshold: -1372
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 48 of 1384 (3.47%)
+
+--- Computing weak classifier n. 12 of stage 3 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 5 16]
+- Y: [ 10 11 12]
+- polarity: -1
+- threshold: 101
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 209 of 1384 (15.10%)
+
+--- Computing weak classifier n. 13 of stage 3 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 4 6]
+- Y: [ 7 11 15]
+- polarity: 1
+- threshold: -97
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 169 of 1384 (12.21%)
+
+--- Computing weak classifier n. 14 of stage 3 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 13 14 15 16]
+- Y: [ 18 19]
+- polarity: 1
+- threshold: -64
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 195 of 1384 (14.09%)
+
+--- Computing weak classifier n. 15 of stage 3 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 20 22 24]
+- Y: [ 0 23]
+- polarity: 1
+- threshold: -673
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 172 of 1384 (12.43%)
+
+--- Computing weak classifier n. 16 of stage 3 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 0 2 4]
+- Y: [ 21 24]
+- polarity: -1
+- threshold: -11
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 140 of 1384 (10.12%)
+
+--- Computing weak classifier n. 17 of stage 3 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 19 21 23]
+- Y: [ 5 22]
+- polarity: -1
+- threshold: 537
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 131 of 1384 (9.47%)
+
+--- Computing weak classifier n. 18 of stage 3 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 10 11 12]
+- Y: [ 3 24]
+- polarity: 1
+- threshold: 175
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 147 of 1384 (10.62%)
+
+--- Computing weak classifier n. 19 of stage 3 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 2 4 6]
+- Y: [ 9 19]
+- polarity: 1
+- threshold: -436
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 134 of 1384 (9.68%)
+
+--- Computing weak classifier n. 20 of stage 3 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 1 2 3]
+- Y: [ 2 3 4]
+- polarity: 1
+- threshold: 0
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 206 of 1384 (14.88%)
+
+--- Computing weak classifier n. 21 of stage 3 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 7 13 19]
+- Y: [ 10 15 20]
+- polarity: -1
+- threshold: -990
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 243 of 1384 (17.56%)
+
+--- Computing weak classifier n. 22 of stage 3 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 16 20 24]
+- Y: [ 7 21]
+- polarity: 1
+- threshold: -994
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 205 of 1384 (14.81%)
+
+--- Computing weak classifier n. 23 of stage 3 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 11 14 17]
+- Y: [ 2 13 24]
+- polarity: 1
+- threshold: 140
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 281 of 1384 (20.30%)
+
+--- Computing weak classifier n. 24 of stage 3 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 17 20 23]
+- Y: [ 7 9]
+- polarity: -1
+- threshold: 76
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 447 of 1384 (32.30%)
+
+--- Computing weak classifier n. 25 of stage 3 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 13 15 17]
+- Y: [ 17 18 19]
+- polarity: 1
+- threshold: -9
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 376 of 1384 (27.17%)
+
+--- Computing weak classifier n. 26 of stage 3 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 14 16 18]
+- Y: [ 9 10 11]
+- polarity: 1
+- threshold: -7
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 317 of 1384 (22.90%)
+
+--- Computing weak classifier n. 27 of stage 3 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 11 12 13]
+- Y: [ 1 5]
+- polarity: 1
+- threshold: 36
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 355 of 1384 (25.65%)
+
+--- Computing weak classifier n. 28 of stage 3 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 2 5 8]
+- Y: [ 2 6]
+- polarity: -1
+- threshold: 288
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 324 of 1384 (23.41%)
+
+--- Computing weak classifier n. 29 of stage 3 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 0 6 12 18]
+- Y: [ 6 10]
+- polarity: -1
+- threshold: -2729
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 442 of 1384 (31.94%)
+
+--- Computing weak classifier n. 30 of stage 3 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 7 12]
+- Y: [ 1 2 3]
+- polarity: 1
+- threshold: -33
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 382 of 1384 (27.60%)
+
+--- Computing weak classifier n. 31 of stage 3 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 11 12 13]
+- Y: [ 5 6 7]
+- polarity: 1
+- threshold: 0
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 510 of 1384 (36.85%)
+
+--- Computing weak classifier n. 32 of stage 3 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 14 16]
+- Y: [ 14 15 16 17]
+- polarity: 1
+- threshold: -121
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 536 of 1384 (38.73%)
+
+--- Computing weak classifier n. 33 of stage 3 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 12 18]
+- Y: [ 0 4 8]
+- polarity: -1
+- threshold: 689
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 514 of 1384 (37.14%)
+
+--- Computing weak classifier n. 34 of stage 3 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 8 10 12]
+- Y: [ 3 17]
+- polarity: 1
+- threshold: 1
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 616 of 1384 (44.51%)
+
+--- Computing weak classifier n. 35 of stage 3 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 10 15]
+- Y: [ 17 18 19]
+- polarity: 1
+- threshold: -15
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 557 of 1384 (40.25%)
+
+--- Computing weak classifier n. 36 of stage 3 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 2 19]
+- Y: [ 14 17 20]
+- polarity: -1
+- threshold: 136
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 601 of 1384 (43.42%)
+
+--- Computing weak classifier n. 37 of stage 3 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 12 13]
+- Y: [ 15 16 17]
+- polarity: 1
+- threshold: -5
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 759 of 1384 (54.84%)
+Finalizing the strong classifier...
+Evaluating samples with the strong classifier...
+- False positives introduced: 625
+- False negatives introduced: 0
+Current status:
+- positives marked as positives (correct): 868 of 868 (100.00%)
+- positives marked as negatives (false negatives): 0 of 868 (0.00%)
+- negatives marked as positives (false positives): 625 of 7265 (8.60%)
+- negatives marked as negatives (correct): 6640 of 7265 (91.40%)
+
+
+=== Computing cascade stage n. 4 ===
+
+--- Computing weak classifier n. 1 of stage 4 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 6 19]
+- Y: [ 0 4 8]
+- polarity: 1
+- threshold: -1277
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 0 of 625 (0.00%)
+
+--- Computing weak classifier n. 2 of stage 4 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 10 17 24]
+- Y: [ 20 22]
+- polarity: -1
+- threshold: 235
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 0 of 625 (0.00%)
+
+--- Computing weak classifier n. 3 of stage 4 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 4 16]
+- Y: [ 12 13 14]
+- polarity: 1
+- threshold: -51
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 0 of 625 (0.00%)
+
+--- Computing weak classifier n. 4 of stage 4 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 6 14]
+- Y: [ 9 16 23]
+- polarity: -1
+- threshold: -394
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 0 of 625 (0.00%)
+
+--- Computing weak classifier n. 5 of stage 4 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 0 2 4]
+- Y: [ 4 20]
+- polarity: -1
+- threshold: 373
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 0 of 625 (0.00%)
+
+--- Computing weak classifier n. 6 of stage 4 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 8 9 10]
+- Y: [ 8 9]
+- polarity: 1
+- threshold: 0
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 0 of 625 (0.00%)
+
+--- Computing weak classifier n. 7 of stage 4 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 8 16]
+- Y: [ 11 12 13]
+- polarity: 1
+- threshold: -42
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 0 of 625 (0.00%)
+
+--- Computing weak classifier n. 8 of stage 4 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 4 6 8]
+- Y: [ 9 10]
+- polarity: 1
+- threshold: -13
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 11 of 625 (1.76%)
+
+--- Computing weak classifier n. 9 of stage 4 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 22 23 24]
+- Y: [ 0 21]
+- polarity: 1
+- threshold: -201
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 9 of 625 (1.44%)
+
+--- Computing weak classifier n. 10 of stage 4 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 13 15]
+- Y: [ 13 14 15 16]
+- polarity: -1
+- threshold: -381
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 6 of 625 (0.96%)
+
+--- Computing weak classifier n. 11 of stage 4 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 1 5 9]
+- Y: [ 13 24]
+- polarity: 1
+- threshold: -1640
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 6 of 625 (0.96%)
+
+--- Computing weak classifier n. 12 of stage 4 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 5 13 21]
+- Y: [ 13 16 19]
+- polarity: -1
+- threshold: -785
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 7 of 625 (1.12%)
+
+--- Computing weak classifier n. 13 of stage 4 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 0 5 10]
+- Y: [ 16 24]
+- polarity: -1
+- threshold: 751
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 14 of 625 (2.24%)
+
+--- Computing weak classifier n. 14 of stage 4 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 8 9 10]
+- Y: [ 19 20 21]
+- polarity: 1
+- threshold: -1
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 39 of 625 (6.24%)
+
+--- Computing weak classifier n. 15 of stage 4 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 8 9 10]
+- Y: [ 1 5]
+- polarity: 1
+- threshold: 33
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 54 of 625 (8.64%)
+
+--- Computing weak classifier n. 16 of stage 4 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 19 20 21]
+- Y: [ 8 16 24]
+- polarity: -1
+- threshold: 78
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 82 of 625 (13.12%)
+
+--- Computing weak classifier n. 17 of stage 4 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 14 18 22]
+- Y: [ 0 13]
+- polarity: -1
+- threshold: 559
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 77 of 625 (12.32%)
+
+--- Computing weak classifier n. 18 of stage 4 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 9 10 11]
+- Y: [ 0 8]
+- polarity: -1
+- threshold: -120
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 99 of 625 (15.84%)
+
+--- Computing weak classifier n. 19 of stage 4 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 17 20]
+- Y: [ 0 4 8]
+- polarity: -1
+- threshold: 274
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 80 of 625 (12.80%)
+
+--- Computing weak classifier n. 20 of stage 4 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 11 13 15]
+- Y: [ 9 11]
+- polarity: -1
+- threshold: 33
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 53 of 625 (8.48%)
+
+--- Computing weak classifier n. 21 of stage 4 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 7 8 9]
+- Y: [ 1 9 17]
+- polarity: -1
+- threshold: 6
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 54 of 625 (8.64%)
+
+--- Computing weak classifier n. 22 of stage 4 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 16 20 24]
+- Y: [ 1 6 11]
+- polarity: -1
+- threshold: 450
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 89 of 625 (14.24%)
+
+--- Computing weak classifier n. 23 of stage 4 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 1 4]
+- Y: [ 22 23 24]
+- polarity: 1
+- threshold: 55
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 96 of 625 (15.36%)
+
+--- Computing weak classifier n. 24 of stage 4 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 1 6 11]
+- Y: [ 0 7]
+- polarity: -1
+- threshold: 1120
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 92 of 625 (14.72%)
+
+--- Computing weak classifier n. 25 of stage 4 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 1 2 3]
+- Y: [ 13 14 15]
+- polarity: -1
+- threshold: -11
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 51 of 625 (8.16%)
+
+--- Computing weak classifier n. 26 of stage 4 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 19 21 23]
+- Y: [ 3 23]
+- polarity: -1
+- threshold: 694
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 113 of 625 (18.08%)
+
+--- Computing weak classifier n. 27 of stage 4 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 6 13 20]
+- Y: [ 12 15 18]
+- polarity: 1
+- threshold: 511
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 139 of 625 (22.24%)
+
+--- Computing weak classifier n. 28 of stage 4 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 18 21 24]
+- Y: [ 7 24]
+- polarity: 1
+- threshold: -598
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 124 of 625 (19.84%)
+
+--- Computing weak classifier n. 29 of stage 4 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 2 4 6]
+- Y: [ 17 20 23]
+- polarity: -1
+- threshold: 46
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 103 of 625 (16.48%)
+
+--- Computing weak classifier n. 30 of stage 4 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 8 13 18]
+- Y: [ 10 14 18]
+- polarity: -1
+- threshold: -648
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 113 of 625 (18.08%)
+
+--- Computing weak classifier n. 31 of stage 4 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 4 17]
+- Y: [ 0 2 4]
+- polarity: 1
+- threshold: -599
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 112 of 625 (17.92%)
+
+--- Computing weak classifier n. 32 of stage 4 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 9 10 11]
+- Y: [ 16 17 18]
+- polarity: 1
+- threshold: -1
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 162 of 625 (25.92%)
+
+--- Computing weak classifier n. 33 of stage 4 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 11 12 13]
+- Y: [ 2 3]
+- polarity: 1
+- threshold: 13
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 189 of 625 (30.24%)
+
+--- Computing weak classifier n. 34 of stage 4 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 12 13 14]
+- Y: [ 10 11 12]
+- polarity: -1
+- threshold: 4
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 156 of 625 (24.96%)
+
+--- Computing weak classifier n. 35 of stage 4 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 5 8]
+- Y: [ 5 8 11]
+- polarity: 1
+- threshold: -83
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 131 of 625 (20.96%)
+
+--- Computing weak classifier n. 36 of stage 4 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 0 8 16 24]
+- Y: [ 5 21]
+- polarity: -1
+- threshold: -11140
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 194 of 625 (31.04%)
+
+--- Computing weak classifier n. 37 of stage 4 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 12 13 14]
+- Y: [ 15 19 23]
+- polarity: -1
+- threshold: -55
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 218 of 625 (34.88%)
+
+--- Computing weak classifier n. 38 of stage 4 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 5 23]
+- Y: [ 11 12 13]
+- polarity: 1
+- threshold: -233
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 204 of 625 (32.64%)
+
+--- Computing weak classifier n. 39 of stage 4 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 6 14 22]
+- Y: [ 13 15 17]
+- polarity: -1
+- threshold: -303
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 225 of 625 (36.00%)
+
+--- Computing weak classifier n. 40 of stage 4 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 16 18 20]
+- Y: [ 19 21]
+- polarity: 1
+- threshold: -27
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 301 of 625 (48.16%)
+
+--- Computing weak classifier n. 41 of stage 4 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 12 15 18]
+- Y: [ 17 18 19]
+- polarity: 1
+- threshold: -16
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 263 of 625 (42.08%)
+
+--- Computing weak classifier n. 42 of stage 4 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 1 2 3]
+- Y: [ 18 21]
+- polarity: -1
+- threshold: 0
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 225 of 625 (36.00%)
+
+--- Computing weak classifier n. 43 of stage 4 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 22 23 24]
+- Y: [ 23 24]
+- polarity: 1
+- threshold: 0
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 218 of 625 (34.88%)
+
+--- Computing weak classifier n. 44 of stage 4 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 14 19 24]
+- Y: [ 12 20]
+- polarity: -1
+- threshold: 1137
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 252 of 625 (40.32%)
+
+--- Computing weak classifier n. 45 of stage 4 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 9 13 17 21]
+- Y: [ 16 17]
+- polarity: 1
+- threshold: -301
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 283 of 625 (45.28%)
+
+--- Computing weak classifier n. 46 of stage 4 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 10 11 12]
+- Y: [ 9 12]
+- polarity: 1
+- threshold: -27
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 286 of 625 (45.76%)
+
+--- Computing weak classifier n. 47 of stage 4 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 0 1 2]
+- Y: [ 4 5 6]
+- polarity: 1
+- threshold: 0
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 308 of 625 (49.28%)
+
+--- Computing weak classifier n. 48 of stage 4 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 11 12 13]
+- Y: [ 8 11]
+- polarity: -1
+- threshold: 12
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 312 of 625 (49.92%)
+
+--- Computing weak classifier n. 49 of stage 4 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 13 14 15]
+- Y: [ 15 19]
+- polarity: 1
+- threshold: 41
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 344 of 625 (55.04%)
+Finalizing the strong classifier...
+Evaluating samples with the strong classifier...
+- False positives introduced: 281
+- False negatives introduced: 0
+Current status:
+- positives marked as positives (correct): 868 of 868 (100.00%)
+- positives marked as negatives (false negatives): 0 of 868 (0.00%)
+- negatives marked as positives (false positives): 281 of 7265 (3.87%)
+- negatives marked as negatives (correct): 6984 of 7265 (96.13%)
+
+
+=== Computing cascade stage n. 5 ===
+
+--- Computing weak classifier n. 1 of stage 5 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 1 6 11]
+- Y: [ 0 4 8]
+- polarity: 1
+- threshold: -785
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 0 of 281 (0.00%)
+
+--- Computing weak classifier n. 2 of stage 5 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 2 16]
+- Y: [ 10 12 14]
+- polarity: 1
+- threshold: -179
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 0 of 281 (0.00%)
+
+--- Computing weak classifier n. 3 of stage 5 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 3 8 13]
+- Y: [ 21 22]
+- polarity: 1
+- threshold: -88
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 0 of 281 (0.00%)
+
+--- Computing weak classifier n. 4 of stage 5 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 5 13 21]
+- Y: [ 11 15 19]
+- polarity: -1
+- threshold: -773
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 0 of 281 (0.00%)
+
+--- Computing weak classifier n. 5 of stage 5 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 8 16]
+- Y: [ 8 10 12]
+- polarity: -1
+- threshold: 281
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 0 of 281 (0.00%)
+
+--- Computing weak classifier n. 6 of stage 5 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 9 11]
+- Y: [ 9 14 19]
+- polarity: -1
+- threshold: -358
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 0 of 281 (0.00%)
+
+--- Computing weak classifier n. 7 of stage 5 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 14 19 24]
+- Y: [ 11 20]
+- polarity: -1
+- threshold: 1830
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 0 of 281 (0.00%)
+
+--- Computing weak classifier n. 8 of stage 5 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 0 7 14]
+- Y: [ 0 1]
+- polarity: -1
+- threshold: 66
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 10 of 281 (3.56%)
+
+--- Computing weak classifier n. 9 of stage 5 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 9 13]
+- Y: [ 6 12 18]
+- polarity: 1
+- threshold: 734
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 10 of 281 (3.56%)
+
+--- Computing weak classifier n. 10 of stage 5 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 1 7 13]
+- Y: [ 21 23]
+- polarity: -1
+- threshold: 177
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 9 of 281 (3.20%)
+
+--- Computing weak classifier n. 11 of stage 5 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 8 9 10]
+- Y: [ 4 5]
+- polarity: 1
+- threshold: -1
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 18 of 281 (6.41%)
+
+--- Computing weak classifier n. 12 of stage 5 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 19 22]
+- Y: [ 17 18 19]
+- polarity: -1
+- threshold: -4
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 12 of 281 (4.27%)
+
+--- Computing weak classifier n. 13 of stage 5 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 12 17 22]
+- Y: [ 10 11 12]
+- polarity: 1
+- threshold: -37
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 6 of 281 (2.14%)
+
+--- Computing weak classifier n. 14 of stage 5 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 20 24]
+- Y: [ 10 11 12]
+- polarity: -1
+- threshold: -83
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 7 of 281 (2.49%)
+
+--- Computing weak classifier n. 15 of stage 5 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 6 19]
+- Y: [ 0 1 2]
+- polarity: 1
+- threshold: -174
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 29 of 281 (10.32%)
+
+--- Computing weak classifier n. 16 of stage 5 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 2 4 6]
+- Y: [ 9 12 15]
+- polarity: 1
+- threshold: -17
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 34 of 281 (12.10%)
+
+--- Computing weak classifier n. 17 of stage 5 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 14 15 16]
+- Y: [ 1 24]
+- polarity: -1
+- threshold: -123
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 43 of 281 (15.30%)
+
+--- Computing weak classifier n. 18 of stage 5 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 18 21 24]
+- Y: [ 9 23]
+- polarity: 1
+- threshold: -629
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 57 of 281 (20.28%)
+
+--- Computing weak classifier n. 19 of stage 5 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 21 22 23]
+- Y: [ 1 6 11]
+- polarity: -1
+- threshold: 0
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 38 of 281 (13.52%)
+
+--- Computing weak classifier n. 20 of stage 5 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 13 14 15]
+- Y: [ 21 22 23]
+- polarity: 1
+- threshold: 16
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 53 of 281 (18.86%)
+
+--- Computing weak classifier n. 21 of stage 5 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 1 4 7]
+- Y: [ 5 16]
+- polarity: 1
+- threshold: -1068
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 50 of 281 (17.79%)
+
+--- Computing weak classifier n. 22 of stage 5 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 9 14]
+- Y: [ 13 18 23]
+- polarity: 1
+- threshold: 1152
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 60 of 281 (21.35%)
+
+--- Computing weak classifier n. 23 of stage 5 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 8 12]
+- Y: [ 8 9 10]
+- polarity: 1
+- threshold: -84
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 70 of 281 (24.91%)
+
+--- Computing weak classifier n. 24 of stage 5 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 13 17]
+- Y: [ 14 17 20]
+- polarity: -1
+- threshold: 6
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 51 of 281 (18.15%)
+
+--- Computing weak classifier n. 25 of stage 5 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 19 21 23]
+- Y: [ 2 13 24]
+- polarity: -1
+- threshold: 250
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 44 of 281 (15.66%)
+
+--- Computing weak classifier n. 26 of stage 5 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 11 13 15]
+- Y: [ 1 2]
+- polarity: 1
+- threshold: 65
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 54 of 281 (19.22%)
+
+--- Computing weak classifier n. 27 of stage 5 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 10 16]
+- Y: [ 21 22 23]
+- polarity: -1
+- threshold: 67
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 46 of 281 (16.37%)
+
+--- Computing weak classifier n. 28 of stage 5 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 21 22 23]
+- Y: [ 18 19 20]
+- polarity: 1
+- threshold: 1
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 56 of 281 (19.93%)
+
+--- Computing weak classifier n. 29 of stage 5 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 8 9 10]
+- Y: [ 8 9]
+- polarity: 1
+- threshold: -3
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 67 of 281 (23.84%)
+
+--- Computing weak classifier n. 30 of stage 5 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 3 6 9 12]
+- Y: [ 8 11]
+- polarity: -1
+- threshold: -1293
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 82 of 281 (29.18%)
+
+--- Computing weak classifier n. 31 of stage 5 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 0 2]
+- Y: [ 11 13 15 17]
+- polarity: 1
+- threshold: -576
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 77 of 281 (27.40%)
+
+--- Computing weak classifier n. 32 of stage 5 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 1 2 3]
+- Y: [ 13 14 15]
+- polarity: 1
+- threshold: 18
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 96 of 281 (34.16%)
+
+--- Computing weak classifier n. 33 of stage 5 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 3 5 7]
+- Y: [ 0 4 8]
+- polarity: -1
+- threshold: 142
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 122 of 281 (43.42%)
+
+--- Computing weak classifier n. 34 of stage 5 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 1 2 3]
+- Y: [ 0 1 2]
+- polarity: 1
+- threshold: 5
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 138 of 281 (49.11%)
+
+--- Computing weak classifier n. 35 of stage 5 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 0 1 2]
+- Y: [ 13 23]
+- polarity: -1
+- threshold: 11
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 114 of 281 (40.57%)
+
+--- Computing weak classifier n. 36 of stage 5 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 1 2 3]
+- Y: [ 7 8]
+- polarity: 1
+- threshold: 4
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 83 of 281 (29.54%)
+
+--- Computing weak classifier n. 37 of stage 5 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 0 6 12]
+- Y: [ 0 3 6]
+- polarity: 1
+- threshold: -645
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 80 of 281 (28.47%)
+
+--- Computing weak classifier n. 38 of stage 5 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 12 13 14]
+- Y: [ 2 3 4]
+- polarity: 1
+- threshold: 10
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 97 of 281 (34.52%)
+
+--- Computing weak classifier n. 39 of stage 5 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 15 16]
+- Y: [ 12 14 16]
+- polarity: 1
+- threshold: -24
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 80 of 281 (28.47%)
+
+--- Computing weak classifier n. 40 of stage 5 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 17 19 21]
+- Y: [ 10 12 14]
+- polarity: -1
+- threshold: 25
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 84 of 281 (29.89%)
+
+--- Computing weak classifier n. 41 of stage 5 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 1 12 23]
+- Y: [ 6 8 10]
+- polarity: 1
+- threshold: 348
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 97 of 281 (34.52%)
+
+--- Computing weak classifier n. 42 of stage 5 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 11 20]
+- Y: [ 0 1 2 3]
+- polarity: 1
+- threshold: -1396
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 92 of 281 (32.74%)
+
+--- Computing weak classifier n. 43 of stage 5 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 13 14 15 16]
+- Y: [ 15 16]
+- polarity: -1
+- threshold: -182
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 111 of 281 (39.50%)
+
+--- Computing weak classifier n. 44 of stage 5 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 0 8 16]
+- Y: [ 21 22]
+- polarity: 1
+- threshold: -354
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 99 of 281 (35.23%)
+
+--- Computing weak classifier n. 45 of stage 5 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 0 4]
+- Y: [ 3 4 5]
+- polarity: 1
+- threshold: 47
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 116 of 281 (41.28%)
+
+--- Computing weak classifier n. 46 of stage 5 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 0 4 8]
+- Y: [ 0 5 10]
+- polarity: 1
+- threshold: -595
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 106 of 281 (37.72%)
+
+--- Computing weak classifier n. 47 of stage 5 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 7 13 19]
+- Y: [ 3 10 17]
+- polarity: -1
+- threshold: -1100
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 128 of 281 (45.55%)
+
+--- Computing weak classifier n. 48 of stage 5 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 6 7 8]
+- Y: [ 3 4]
+- polarity: 1
+- threshold: -4
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 102 of 281 (36.30%)
+
+--- Computing weak classifier n. 49 of stage 5 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 6 7 8]
+- Y: [ 8 10 12]
+- polarity: -1
+- threshold: 7
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 149 of 281 (53.02%)
+Finalizing the strong classifier...
+Evaluating samples with the strong classifier...
+- False positives introduced: 132
+- False negatives introduced: 0
+Current status:
+- positives marked as positives (correct): 868 of 868 (100.00%)
+- positives marked as negatives (false negatives): 0 of 868 (0.00%)
+- negatives marked as positives (false positives): 132 of 7265 (1.82%)
+- negatives marked as negatives (correct): 7133 of 7265 (98.18%)
+
+
+=== Computing cascade stage n. 6 ===
+
+--- Computing weak classifier n. 1 of stage 6 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 6 15]
+- Y: [ 0 4 8]
+- polarity: 1
+- threshold: -980
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 0 of 132 (0.00%)
+
+--- Computing weak classifier n. 2 of stage 6 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 5 10]
+- Y: [ 14 16 18]
+- polarity: -1
+- threshold: 28
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 0 of 132 (0.00%)
+
+--- Computing weak classifier n. 3 of stage 6 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 4 6 8]
+- Y: [ 9 11]
+- polarity: 1
+- threshold: -24
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 0 of 132 (0.00%)
+
+--- Computing weak classifier n. 4 of stage 6 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 8 10 12]
+- Y: [ 7 14 21]
+- polarity: -1
+- threshold: 56
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 0 of 132 (0.00%)
+
+--- Computing weak classifier n. 5 of stage 6 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 18 21 24]
+- Y: [ 1 9 17]
+- polarity: -1
+- threshold: 551
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 0 of 132 (0.00%)
+
+--- Computing weak classifier n. 6 of stage 6 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 0 12 24]
+- Y: [ 7 15 23]
+- polarity: -1
+- threshold: -3259
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 1 of 132 (0.76%)
+
+--- Computing weak classifier n. 7 of stage 6 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 12 18]
+- Y: [ 20 22 24]
+- polarity: -1
+- threshold: 152
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 1 of 132 (0.76%)
+
+--- Computing weak classifier n. 8 of stage 6 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 0 1 2]
+- Y: [ 14 15]
+- polarity: -1
+- threshold: -2
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 1 of 132 (0.76%)
+
+--- Computing weak classifier n. 9 of stage 6 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 0 1]
+- Y: [ 6 7 8]
+- polarity: -1
+- threshold: -4
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 0 of 132 (0.00%)
+
+--- Computing weak classifier n. 10 of stage 6 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 18 20 22]
+- Y: [ 14 18 22]
+- polarity: -1
+- threshold: 70
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 0 of 132 (0.00%)
+
+--- Computing weak classifier n. 11 of stage 6 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 4 11 18]
+- Y: [ 8 12 16]
+- polarity: 1
+- threshold: 844
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 0 of 132 (0.00%)
+
+--- Computing weak classifier n. 12 of stage 6 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 1 5 9]
+- Y: [ 0 4]
+- polarity: -1
+- threshold: 429
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 4 of 132 (3.03%)
+
+--- Computing weak classifier n. 13 of stage 6 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 20 24]
+- Y: [ 10 11 12]
+- polarity: 1
+- threshold: 61
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 7 of 132 (5.30%)
+
+--- Computing weak classifier n. 14 of stage 6 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 8 16]
+- Y: [ 8 10 12]
+- polarity: -1
+- threshold: 317
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 7 of 132 (5.30%)
+
+--- Computing weak classifier n. 15 of stage 6 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 14 15 16 17]
+- Y: [ 16 17]
+- polarity: 1
+- threshold: -82
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 11 of 132 (8.33%)
+
+--- Computing weak classifier n. 16 of stage 6 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 8 16]
+- Y: [ 8 10 12]
+- polarity: 1
+- threshold: -172
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 19 of 132 (14.39%)
+
+--- Computing weak classifier n. 17 of stage 6 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 16 17]
+- Y: [ 18 19 20 21]
+- polarity: -1
+- threshold: -152
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 22 of 132 (16.67%)
+
+--- Computing weak classifier n. 18 of stage 6 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 4 7 10]
+- Y: [ 15 19 23]
+- polarity: 1
+- threshold: -143
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 23 of 132 (17.42%)
+
+--- Computing weak classifier n. 19 of stage 6 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 6 14 22]
+- Y: [ 11 15 19]
+- polarity: -1
+- threshold: -555
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 27 of 132 (20.45%)
+
+--- Computing weak classifier n. 20 of stage 6 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 2 6 10]
+- Y: [ 3 4]
+- polarity: 1
+- threshold: -132
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 26 of 132 (19.70%)
+
+--- Computing weak classifier n. 21 of stage 6 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 8 9 10]
+- Y: [ 4 5]
+- polarity: 1
+- threshold: 14
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 31 of 132 (23.48%)
+
+--- Computing weak classifier n. 22 of stage 6 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 15 17 19]
+- Y: [ 6 15]
+- polarity: -1
+- threshold: 279
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 39 of 132 (29.55%)
+
+--- Computing weak classifier n. 23 of stage 6 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 0 1]
+- Y: [ 14 16 18]
+- polarity: 1
+- threshold: 6
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 55 of 132 (41.67%)
+
+--- Computing weak classifier n. 24 of stage 6 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 16 17 18]
+- Y: [ 11 13]
+- polarity: 1
+- threshold: -5
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 41 of 132 (31.06%)
+
+--- Computing weak classifier n. 25 of stage 6 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 9 10 11]
+- Y: [ 3 5 7]
+- polarity: -1
+- threshold: -30
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 49 of 132 (37.12%)
+
+--- Computing weak classifier n. 26 of stage 6 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 19 20 21]
+- Y: [ 7 10 13]
+- polarity: 1
+- threshold: -40
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 44 of 132 (33.33%)
+
+--- Computing weak classifier n. 27 of stage 6 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 11 12 13]
+- Y: [ 14 19 24]
+- polarity: -1
+- threshold: -102
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 50 of 132 (37.88%)
+
+--- Computing weak classifier n. 28 of stage 6 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 22 23 24]
+- Y: [ 18 20]
+- polarity: 1
+- threshold: -15
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 45 of 132 (34.09%)
+
+--- Computing weak classifier n. 29 of stage 6 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 0 1 2]
+- Y: [ 19 20 21]
+- polarity: 1
+- threshold: 10
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 59 of 132 (44.70%)
+
+--- Computing weak classifier n. 30 of stage 6 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 8 18]
+- Y: [ 18 19 20]
+- polarity: 1
+- threshold: -45
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 57 of 132 (43.18%)
+
+--- Computing weak classifier n. 31 of stage 6 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 22 23 24]
+- Y: [ 13 14 15]
+- polarity: 1
+- threshold: 0
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 71 of 132 (53.79%)
+Finalizing the strong classifier...
+Evaluating samples with the strong classifier...
+- False positives introduced: 61
+- False negatives introduced: 0
+Current status:
+- positives marked as positives (correct): 868 of 868 (100.00%)
+- positives marked as negatives (false negatives): 0 of 868 (0.00%)
+- negatives marked as positives (false positives): 61 of 7265 (0.84%)
+- negatives marked as negatives (correct): 7204 of 7265 (99.16%)
+
+
+=== Computing cascade stage n. 7 ===
+
+--- Computing weak classifier n. 1 of stage 7 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 3 12]
+- Y: [ 10 12 14]
+- polarity: 1
+- threshold: -211
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 0 of 61 (0.00%)
+
+--- Computing weak classifier n. 2 of stage 7 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 6 7 8]
+- Y: [ 7 8]
+- polarity: 1
+- threshold: -7
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 0 of 61 (0.00%)
+
+--- Computing weak classifier n. 3 of stage 7 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 23 24]
+- Y: [ 3 8 13]
+- polarity: -1
+- threshold: -69
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 0 of 61 (0.00%)
+
+--- Computing weak classifier n. 4 of stage 7 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 17 20]
+- Y: [ 6 7 8]
+- polarity: 1
+- threshold: 3
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 0 of 61 (0.00%)
+
+--- Computing weak classifier n. 5 of stage 7 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 12 13 14]
+- Y: [ 6 12]
+- polarity: -1
+- threshold: 2
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 0 of 61 (0.00%)
+
+--- Computing weak classifier n. 6 of stage 7 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 3 7 11]
+- Y: [ 0 2]
+- polarity: -1
+- threshold: 19
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 0 of 61 (0.00%)
+
+--- Computing weak classifier n. 7 of stage 7 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 16 17]
+- Y: [ 14 17 20 23]
+- polarity: 1
+- threshold: -121
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 0 of 61 (0.00%)
+
+--- Computing weak classifier n. 8 of stage 7 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 12 13]
+- Y: [ 22 23 24]
+- polarity: 1
+- threshold: -2
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 0 of 61 (0.00%)
+
+--- Computing weak classifier n. 9 of stage 7 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 14 17 20]
+- Y: [ 0 16]
+- polarity: -1
+- threshold: 244
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 1 of 61 (1.64%)
+
+--- Computing weak classifier n. 10 of stage 7 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 5 9 13]
+- Y: [ 0 1 2]
+- polarity: 1
+- threshold: -6
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 2 of 61 (3.28%)
+
+--- Computing weak classifier n. 11 of stage 7 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 21 22 23]
+- Y: [ 11 12 13]
+- polarity: 1
+- threshold: 33
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 2 of 61 (3.28%)
+
+--- Computing weak classifier n. 12 of stage 7 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 12 15 18]
+- Y: [ 21 22 23]
+- polarity: 1
+- threshold: -37
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 2 of 61 (3.28%)
+
+--- Computing weak classifier n. 13 of stage 7 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 4 5]
+- Y: [ 15 16 17]
+- polarity: 1
+- threshold: 15
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 3 of 61 (4.92%)
+
+--- Computing weak classifier n. 14 of stage 7 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 19 22]
+- Y: [ 17 18 19]
+- polarity: -1
+- threshold: 9
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 6 of 61 (9.84%)
+
+--- Computing weak classifier n. 15 of stage 7 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 8 10 12 14]
+- Y: [ 20 24]
+- polarity: -1
+- threshold: -1171
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 11 of 61 (18.03%)
+
+--- Computing weak classifier n. 16 of stage 7 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 3 4]
+- Y: [ 22 23 24]
+- polarity: 1
+- threshold: 0
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 8 of 61 (13.11%)
+
+--- Computing weak classifier n. 17 of stage 7 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 6 15]
+- Y: [ 17 20 23]
+- polarity: 1
+- threshold: 568
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 8 of 61 (13.11%)
+
+--- Computing weak classifier n. 18 of stage 7 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 5 7]
+- Y: [ 5 7 9]
+- polarity: 1
+- threshold: -22
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 13 of 61 (21.31%)
+
+--- Computing weak classifier n. 19 of stage 7 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 2 11 20]
+- Y: [ 0 7 14]
+- polarity: 1
+- threshold: 1375
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 19 of 61 (31.15%)
+
+--- Computing weak classifier n. 20 of stage 7 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 12 15]
+- Y: [ 17 18 19]
+- polarity: -1
+- threshold: 27
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 19 of 61 (31.15%)
+
+--- Computing weak classifier n. 21 of stage 7 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 20 21 22]
+- Y: [ 12 13 14]
+- polarity: 1
+- threshold: 0
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 15 of 61 (24.59%)
+
+--- Computing weak classifier n. 22 of stage 7 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 5 8 11 14]
+- Y: [ 14 16]
+- polarity: 1
+- threshold: -623
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 30 of 61 (49.18%)
+
+--- Computing weak classifier n. 23 of stage 7 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 13 15 17]
+- Y: [ 7 10 13]
+- polarity: 1
+- threshold: -14
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 29 of 61 (47.54%)
+
+--- Computing weak classifier n. 24 of stage 7 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 6 12 18 24]
+- Y: [ 13 15]
+- polarity: -1
+- threshold: -1689
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 42 of 61 (68.85%)
+Finalizing the strong classifier...
+Evaluating samples with the strong classifier...
+- False positives introduced: 19
+- False negatives introduced: 0
+Current status:
+- positives marked as positives (correct): 868 of 868 (100.00%)
+- positives marked as negatives (false negatives): 0 of 868 (0.00%)
+- negatives marked as positives (false positives): 19 of 7265 (0.26%)
+- negatives marked as negatives (correct): 7246 of 7265 (99.74%)
+
+
+=== Computing cascade stage n. 8 ===
+
+--- Computing weak classifier n. 1 of stage 8 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 14 19 24]
+- Y: [ 0 6 12]
+- polarity: -1
+- threshold: 339
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 0 of 19 (0.00%)
+
+--- Computing weak classifier n. 2 of stage 8 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 5 14 23]
+- Y: [ 12 15 18]
+- polarity: -1
+- threshold: -629
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 0 of 19 (0.00%)
+
+--- Computing weak classifier n. 3 of stage 8 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 0 4 8]
+- Y: [ 1 6]
+- polarity: -1
+- threshold: -12
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 0 of 19 (0.00%)
+
+--- Computing weak classifier n. 4 of stage 8 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 4 7]
+- Y: [ 17 18 19]
+- polarity: -1
+- threshold: -38
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 3 of 19 (15.79%)
+
+--- Computing weak classifier n. 5 of stage 8 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 16 19]
+- Y: [ 14 15 16]
+- polarity: -1
+- threshold: -1
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 2 of 19 (10.53%)
+
+--- Computing weak classifier n. 6 of stage 8 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 7 17]
+- Y: [ 6 14 22]
+- polarity: -1
+- threshold: -483
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 5 of 19 (26.32%)
+
+--- Computing weak classifier n. 7 of stage 8 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 9 10 11]
+- Y: [ 4 6]
+- polarity: -1
+- threshold: -36
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 10 of 19 (52.63%)
+Finalizing the strong classifier...
+Evaluating samples with the strong classifier...
+- False positives introduced: 9
+- False negatives introduced: 0
+Current status:
+- positives marked as positives (correct): 868 of 868 (100.00%)
+- positives marked as negatives (false negatives): 0 of 868 (0.00%)
+- negatives marked as positives (false positives): 9 of 7265 (0.12%)
+- negatives marked as negatives (correct): 7256 of 7265 (99.88%)
+
+
+=== Computing cascade stage n. 9 ===
+
+--- Computing weak classifier n. 1 of stage 9 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 15 16 17]
+- Y: [ 7 11 15]
+- polarity: 1
+- threshold: 2
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 0 of 9 (0.00%)
+
+--- Computing weak classifier n. 2 of stage 9 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 17 18 19]
+- Y: [ 19 20 21]
+- polarity: 1
+- threshold: 52
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 0 of 9 (0.00%)
+
+--- Computing weak classifier n. 3 of stage 9 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 22 23]
+- Y: [ 2 5 8]
+- polarity: -1
+- threshold: -63
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 0 of 9 (0.00%)
+
+--- Computing weak classifier n. 4 of stage 9 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 13 18]
+- Y: [ 5 13 21]
+- polarity: -1
+- threshold: -353
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 0 of 9 (0.00%)
+
+--- Computing weak classifier n. 5 of stage 9 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 17 18 19]
+- Y: [ 19 20 21]
+- polarity: 1
+- threshold: 52
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 0 of 9 (0.00%)
+
+--- Computing weak classifier n. 6 of stage 9 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 3 10 17]
+- Y: [ 14 20]
+- polarity: 1
+- threshold: -355
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 4 of 9 (44.44%)
+
+--- Computing weak classifier n. 7 of stage 9 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 5 10 15 20]
+- Y: [ 14 15]
+- polarity: -1
+- threshold: -1088
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 7 of 9 (77.78%)
+Finalizing the strong classifier...
+Evaluating samples with the strong classifier...
+- False positives introduced: 2
+- False negatives introduced: 0
+Current status:
+- positives marked as positives (correct): 868 of 868 (100.00%)
+- positives marked as negatives (false negatives): 0 of 868 (0.00%)
+- negatives marked as positives (false positives): 2 of 7265 (0.03%)
+- negatives marked as negatives (correct): 7263 of 7265 (99.97%)
+
+
+=== Computing cascade stage n. 10 ===
+
+--- Computing weak classifier n. 1 of stage 10 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 19 23]
+- Y: [ 5 6 7]
+- polarity: -1
+- threshold: -115
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 0 of 2 (0.00%)
+
+--- Computing weak classifier n. 2 of stage 10 ---
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|...................................................................................................................................................................|
+Weak classifier selected:
+- X: [ 10 15]
+- Y: [ 8 16 24]
+- polarity: -1
+- threshold: -591
+Updating weights...
+Finalizing the weak classifier...
+Updating the strong classifier...
+Testing the strong classifier against the negative samples...
+Negative examples pruned: 2 of 2 (100.00%)
+Finalizing the strong classifier...
+Evaluating samples with the strong classifier...
+- False positives introduced: 0
+- False negatives introduced: 0
+Current status:
+- positives marked as positives (correct): 868 of 868 (100.00%)
+- positives marked as negatives (false negatives): 0 of 868 (0.00%)
+- negatives marked as positives (false positives): 0 of 7265 (0.00%)
+- negatives marked as negatives (correct): 7265 of 7265 (100.00%)
+
+Training terminated, saving results...

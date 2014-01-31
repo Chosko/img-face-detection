@@ -28,7 +28,7 @@ for i=1:length(listing)
 end
 
 if count == 0
-    warning('No images were found into %s', path);
+    error('No images were found into %s', path);
     images = 0;
 else
     images = images(:,:,1:count);

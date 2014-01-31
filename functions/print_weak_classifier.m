@@ -24,8 +24,8 @@ function print_weak_classifier( size, feat, picture )
             fprintf('\n');
         end
     end
-    fprintf('- X: ['); fprintf(' %d', feat.X); fprintf(']\n');
-    fprintf('- Y: ['); fprintf(' %d', feat.Y); fprintf(']\n');
+    fprintf('- X: ['); fprintf(' %d', feat.X); fprintf(' ]\n');
+    fprintf('- Y: ['); fprintf(' %d', feat.Y); fprintf(' ]\n');
     fprintf('- polarity: %d\n', feat.polarity);
     fprintf('- threshold: %d\n', feat.threshold);
 end

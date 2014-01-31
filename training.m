@@ -15,10 +15,31 @@ else
     error('The features were not fully computed. Run compute_features before');
 end
 
-fprintf('*** Training started ***\n');
-fprintf('This will take a lot of time!! Keep calm and be Buren!\n');
+resuming = 0;
+if(exist(TRAINING_TMP_FILE, 'file'))
+    choose = '';
+    fprintf('Last time the execution has been interrupted unexpectedly.\n');
+    fprintf('You can now resume or start over.\n');
+    fprintf('Note: if you restart, you will no longer be able to resume\n');
+    while (~strcmp(choose,'y')) && (~strcmp(choose,'n'))
+        choose = input('Resume from where it was interrupted? [y/n] ', 's');
+    end
+    if strcmp(choose,'n')
+        resuming = 0;
+        delete(TRAINING_TMP_FILE);
+    else
+        resuming = 1;
+    end
+end
 
-fprintf('Initializing data structures...\n');
+tic;
+if ~resuming
+    fprintf('*** Training started ***\n');
+    fprintf('This will take a lot of time!! Keep calm and be Buren!\n');
+    fprintf('You can pause the execution at any time by killing the process (CTRL+C):\n');
+    fprintf('  you will be prompted if you want to resume at the next execution\n');
+    fprintf('\nInitializing data structures...\n');
+end
 % Variabili che servono per costruire nuovi classifiers
 new_weak_classifier = struct('X',zeros(1,4), 'Y', zeros(1,4), 'polarity', 0, 'threshold', 0, 'alpha', 0, 'confirmed', 0, 'values', zeros(1,tot_samples));
 new_strong_classifier = struct('weak_classifiers', new_weak_classifier, 'threshold', 0, 'confirmed', 0);
@@ -44,6 +65,8 @@ while false_pos + false_neg > 0
     % Incrementa il numero di stage
     strong_cnt = strong_cnt + 1;
     if strong_cnt > MAX_STRONG_CNT
+        strong_cnt = strong_cnt - 1;
+        warning('Training truncated because the number of strong classifiers exceeds the maximum set into ''config_training.m''');
         break;
     end
     
@@ -57,7 +80,9 @@ while false_pos + false_neg > 0
     % Inizializza i pesi
     weights = [ones(1,tot_pos) / (2*tmp_pos), ones(1,tot_neg) / (2*tmp_neg) ];
     
-    fprintf('\n\n=== Computing cascade stage n. %d ===\n', strong_cnt);
+    if ~resuming
+        fprintf('\n\n=== Computing cascade stage n. %d ===\n', strong_cnt);
+    end
     
     % Aggiunge weak classifiers allo stage corrente finchè non sono stati
     % potati almeno il 50% di samples negativi
@@ -65,7 +90,19 @@ while false_pos + false_neg > 0
         % Incrementa il numero di weak classifier
         weak_cnt = weak_cnt + 1;
         if weak_cnt > MAX_WEAK_CNT
+            weak_cnt = weak_cnt -1;
+            warning('Stage truncated because the number of weak classifiers exceeds the maximum set into ''config_training.m''');
             break;
+        end
+        
+        if resuming
+            fprintf('Loading data...\n');
+            load(TRAINING_TMP_FILE);
+            fprintf('\n\n=== Resuming execution from stage n. %d ===\n', strong_cnt);
+            resuming = 0;
+        else
+            fprintf('Saving data for emergency backup...\n');
+            save(TRAINING_TMP_FILE);
         end
         
         fprintf('\n--- Computing weak classifier n. %d of stage %d ---\n', weak_cnt, strong_cnt);
@@ -131,7 +168,7 @@ while false_pos + false_neg > 0
                         % Se l'errore è minore di e, vuol dire che ho
                         % trovato una feature migliore. Me la salvo e
                         % aggiorno e.
-                        if tmp_e < e
+                        if tmp_e < e && tmp_e ~= 0 % Pongo la seconda condizione perchè se l'errore è 0 sminchia tutto
                             e = tmp_e;
                             tmp_feat_cnt = feat_cnt; %  memorizza l'indice di feature corrente che servirà dopo
                             current_weak_classifiers(weak_cnt).polarity = tmp_p;
@@ -317,3 +354,5 @@ for i = 1:MAX_STRONG_CNT
     end
 end
 save(TRAINING_OUT_FILE, 'cascade');
+delete(TRAINING_TMP_FILE);
+toc;

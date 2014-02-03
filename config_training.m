@@ -23,6 +23,14 @@ POSITIVES_PATH = 'img/newtraining/face/';
 % Percorso in cui si trovano gli esempi negativi
 NEGATIVES_PATH = 'img/newtraining/non-face/';
 
+% Percorso delle immagini positive che servono per testare il detector dopo
+% che è stato allenato
+POSITIVE_TEST_PATH = 'img/newtraining/test/face/';
+
+% Percorso delle immagini negative che servono per testare il detector dopo
+% che è stato allenato
+NEGATIVE_TEST_PATH = 'img/newtraining/test/non-face/';
+
 % Dimesione della finestra
 IMSIZE = 19;
 
@@ -40,6 +48,8 @@ if exist('TEST', 'var') && TEST
     FEAT_PATH = 'test/features/';
     POSITIVES_PATH = 'test/training-set/faces/';
     NEGATIVES_PATH = 'test/training-set/not-faces/';
+    POSITIVE_TEST_PATH = 'test/training-set/faces/';
+    NEGATIVE_TEST_PATH = 'test/training-set/not-faces/';
     TRAINING_OUT_FILE = 'test/out/cascade.mat';
     TRAINING_TMP_FILE = 'test/out/tmp.mat';
     IMSIZE = 19;

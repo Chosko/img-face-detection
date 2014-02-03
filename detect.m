@@ -14,7 +14,10 @@ scalesteps = (maxscale-minscale)/20;
 initial_curstep = 4;
 detected = [];
 det_cnt = 0;
-X = rgb2gray(X);
+Xsrc = X;
+if size(X,3) == 3
+    X = rgb2gray(X);
+end
 I = ii(X);
 I = I(2:end,2:end);
 for scale = minscale:scalesteps:maxscale
@@ -32,7 +35,7 @@ for scale = minscale:scalesteps:maxscale
     end
 end
 
-Y = X;
+Y = Xsrc;
 for i=1:size(detected,1)
     det = detected(i,:);
     top = det(2);

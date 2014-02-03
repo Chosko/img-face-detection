@@ -11,8 +11,9 @@ if strcmp(in,'y')
     training;
     show_detector;
     test_detector;
-    X = imread('test\testimage.jpg');
-    Y = detect(IMSIZE, X, cascade);
+    fprintf('testing the detector on an image...\n');
+    X = imread('test\lena512.pgm');
+    Y = detect(IMSIZE, X, cascade, 1);
     figure;
     imshow(Y);
 else

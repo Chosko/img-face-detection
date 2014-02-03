@@ -7,6 +7,13 @@ FEAT_PATH = 'features/';
 % Prefisso del nome di ogni file in cui è salvato un gruppo di features
 FEAT_FILE_PREFIX = 'featgroup';
 
+% Prefisso del nome di ogni file in cui sono salvati gli indici
+FEAT_INDEXES_FILE_PREFIX = 'featgroup_indexes';
+
+% Prefisso del nome di ogni file in cui è salvato un gruppo di features
+% già ordinato per valore di feature
+FEAT_SORTED_FILE_PREFIX = 'featgroup_sorted';
+
 % File di output della fase di training
 TRAINING_OUT_FILE = 'out/cascade.mat';
 

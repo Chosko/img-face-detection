@@ -7,8 +7,8 @@ config_training;
 
 % Carica il set di test
 fprintf('loading test images...\n');
-positives_src = imreadall(POSITIVE_TEST_PATH,IMSIZE,IMSIZE);
-negatives_src = imreadall(NEGATIVE_TEST_PATH,IMSIZE,IMSIZE);
+positives_src = imreadall(POSITIVE_TEST_PATH,IMSIZE,IMSIZE, 1, 1);
+negatives_src = imreadall(NEGATIVE_TEST_PATH,IMSIZE,IMSIZE, 1, 1);
 tot_pos = size(positives_src,3);
 tot_neg = size(negatives_src,3);
 tot_samples = tot_pos + tot_neg;

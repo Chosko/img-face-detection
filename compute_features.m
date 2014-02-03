@@ -11,13 +11,13 @@ fprintf('*** Computing Haar-like features for given training set ***\n');
 
 % Carica gli esempi positivi
 fprintf('Loading positive samples...\n');
-positives_src = imreadall(POSITIVES_PATH, IMSIZE, IMSIZE);
+positives_src = imreadall(POSITIVES_PATH, IMSIZE, IMSIZE, 1, 1);
 tot_pos = size(positives_src,3);
 fprintf('Loaded %d positive samples\n', tot_pos);
 
 % Carica gli esempi negativi
 fprintf('Loading negative samples...\n');
-negatives_src = imreadall(NEGATIVES_PATH, IMSIZE, IMSIZE);
+negatives_src = imreadall(NEGATIVES_PATH, IMSIZE, IMSIZE, 1, 1);
 tot_neg = size(negatives_src,3);
 fprintf('Loaded %d negative samples\n', tot_neg);
 
@@ -46,7 +46,7 @@ for i = 1:ceil(tot_features/FEAT_PER_GROUP)
     fprintf('-');
 end
 fprintf('|\n|');
-[tot_groups,skipped] = calculate_all_features(integral_images, FEAT_PER_GROUP, FEAT_PATH, FEAT_FILE_PREFIX); 
+[tot_groups,skipped] = calculate_all_features(integral_images, FEAT_PER_GROUP, FEAT_PATH, FEAT_FILE_PREFIX, FEAT_SORTED_FILE_PREFIX, FEAT_INDEXES_FILE_PREFIX); 
 fprintf('|\nGroups calculated: %d (Skipped: %d)\n', tot_groups, skipped);
 if skipped > 0
    warning('Some features were skipped because they already exists. If you want to overwrite them, run ''clear_features'' before');

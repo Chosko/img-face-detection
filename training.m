@@ -125,12 +125,15 @@ while false_pos + false_neg > 0
         
         % Scorre tutti i gruppi di features
         for i = 1:tot_groups
-            filename = sprintf('%s%s_%d.mat', FEAT_PATH, FEAT_FILE_PREFIX, i);
-            load(filename, 'group');
+            group_filename = sprintf('%s%s_%d.mat', FEAT_PATH, FEAT_FILE_PREFIX, i);
+            load(group_filename, 'group');
+            sorted_group_filename = sprintf('%s%s_%d.mat', FEAT_PATH, FEAT_SORTED_FILE_PREFIX, i);
+            load(sorted_group_filename, 'sorted_group');
+            indexes_filename = sprintf('%s%s_%d.mat', FEAT_PATH, FEAT_INDEXES_FILE_PREFIX, i);
+            load(indexes_filename, 'indexes');
             fprintf('.');
             
             current_group_length = size(group,1);
-            [sorted_group, indices] = sort(group,2);
             
             % Per ogni feature del gruppo, trova il threshold che minimizza l'errore
             for j = 1:current_group_length
@@ -143,7 +146,7 @@ while false_pos + false_neg > 0
                 % Calcola la feature per ogni immagine
                 for k = 1:tot_samples
                     % Esegue solo per le immagini ancora non escluse dagli step precedenti
-                    if positives(indices(j,k))
+                    if positives(indexes(j,k))
                         
                         % Calcola questa formula:
                         %
@@ -177,10 +180,10 @@ while false_pos + false_neg > 0
                         end
                         
                         % Aggiorno SPos o SNeg
-                        if indices(j,k) > tot_pos
-                            SNeg = SNeg + weights(indices(j,k));
+                        if indexes(j,k) > tot_pos
+                            SNeg = SNeg + weights(indexes(j,k));
                         else
-                            SPos = SPos + weights(indices(j,k));
+                            SPos = SPos + weights(indexes(j,k));
                         end
                     end
                 end  

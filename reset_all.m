@@ -7,7 +7,6 @@ if strcmp(in,'y')
     fprintf('### RESET STARTED ###\n');
     clear_features;
     compute_features;
-    delete(TRAINING_TMP_FILE);
     training;
     show_detector;
     test_detector;

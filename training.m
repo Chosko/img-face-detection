@@ -127,10 +127,8 @@ while false_pos + false_neg > 0
         for i = 1:tot_groups
             group_filename = sprintf('%s%s_%d.mat', FEAT_PATH, FEAT_FILE_PREFIX, i);
             load(group_filename, 'group');
-            sorted_group_filename = sprintf('%s%s_%d.mat', FEAT_PATH, FEAT_SORTED_FILE_PREFIX, i);
-            load(sorted_group_filename, 'sorted_group');
-            indexes_filename = sprintf('%s%s_%d.mat', FEAT_PATH, FEAT_INDEXES_FILE_PREFIX, i);
-            load(indexes_filename, 'indexes');
+            [sorted_group, indexes] = sort(group,2);
+            
             fprintf('.');
             
             current_group_length = size(group,1);

@@ -46,7 +46,7 @@ for i = 1:ceil(tot_features/FEAT_PER_GROUP)
     fprintf('-');
 end
 fprintf('|\n|');
-[tot_groups,skipped] = calculate_all_features(integral_images, FEAT_PER_GROUP, FEAT_PATH, FEAT_FILE_PREFIX, FEAT_SORTED_FILE_PREFIX, FEAT_INDEXES_FILE_PREFIX); 
+[tot_groups,skipped] = calculate_all_features(integral_images, FEAT_PER_GROUP, FEAT_PATH, FEAT_FILE_PREFIX); 
 fprintf('|\nGroups calculated: %d (Skipped: %d)\n', tot_groups, skipped);
 if skipped > 0
    warning('Some features were skipped because they already exists. If you want to overwrite them, run ''clear_features'' before');

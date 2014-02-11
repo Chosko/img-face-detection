@@ -25,11 +25,11 @@ NEGATIVES_PATH = 'img/newtraining/non-face/';
 
 % Percorso delle immagini positive che servono per testare il detector dopo
 % che è stato allenato
-POSITIVE_TEST_PATH = 'img/newtraining/face/';
+POSITIVE_TEST_PATH = 'img/newtraining/test/face/';
 
 % Percorso delle immagini negative che servono per testare il detector dopo
 % che è stato allenato
-NEGATIVE_TEST_PATH = 'img/newtraining/non-face/';
+NEGATIVE_TEST_PATH = 'img/newtraining/test/non-face/';
 
 % Dimesione della finestra
 IMSIZE = 19;

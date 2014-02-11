@@ -1,4 +1,4 @@
-function Y = detect(windowsize, X, detector, progress)
+function Y = detect(windowsize, X, detector, progress, scale, factor)
 % function Y = detect(X,detector)
 %   This function detects objects into images.
 %   Parameters:
@@ -9,8 +9,11 @@ function Y = detect(windowsize, X, detector, progress)
 if nargin < 4
     progress = 0;
 end
+if nargin < 6
+    factor = 1;
+end
 
-minscale = 16;
+minscale = 1;
 imwidth = size(X,2);
 imheight = size(X,1);
 maxscale = floor(min(imwidth,imheight)/windowsize);
@@ -19,6 +22,12 @@ initial_curstep = 4;
 detected = [];
 det_cnt = 0;
 Xsrc = X;
+
+if  nargin >= 5
+   minscale = scale;
+   maxscale = scale;
+end
+
 if size(X,3) == 3
     X = double(rgb2gray(X));
 else
@@ -31,6 +40,7 @@ if progress
     end
     fprintf('|\n|');
 end
+cnt=0;
 for scale = minscale:scalesteps:maxscale
     if progress
         fprintf('.');
@@ -43,7 +53,8 @@ for scale = minscale:scalesteps:maxscale
             cursrc = X(cury:cury+cursize-1,curx:curx+cursize-1);
             cursrc = normalize_img(cursrc);
             curimg = ii(cursrc);
-            if(classifyimg(windowsize,curimg,detector))
+            cnt = cnt+1;
+            if(classifyimg(windowsize,curimg,detector,factor))
                 det_cnt = det_cnt + 1;
                 detected(det_cnt,:) = [curx cury cursize];
             end
@@ -64,5 +75,4 @@ for i=1:size(detected,1)
     Y(top:bottom, left) = 255;
     Y(top:bottom, right) = 255;
 end
-
 end

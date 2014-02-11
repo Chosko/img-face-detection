@@ -10,11 +10,6 @@ if strcmp(in,'y')
     training;
     show_detector;
     test_detector;
-    fprintf('testing the detector on an image...\n');
-    X = imread('test\lena512.pgm');
-    Y = detect(IMSIZE, X, cascade, 1);
-    figure;
-    imshow(Y);
 else
     fprintf('Reset aborted\n');
 end
